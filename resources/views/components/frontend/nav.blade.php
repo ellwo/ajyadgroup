@@ -38,16 +38,16 @@ class="top-0 transition-transform duration-500 header align-items-center"
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <nav id="navbar" class="navbar ">
             <ul>
-                <li><a href="index.html" class="
+                <li><a href="{{ route('home') }}" class="
                     @if (request()->routeIs('home'))
                     active
                     @else
 
                     @endif
                     ">الرئسية</a></li>
-                <li><a href="about.html">من نحن</a></li>
-                <li><a href="services.html">الخدمات</a></li>
-                <li><a href="blog.html">اخر الاخبار</a></li>
+                <li><a href="#">من نحن</a></li>
+                <li><a href="#">الخدمات</a></li>
+                <li><a href="#">اخر الاخبار</a></li>
                 {{-- <li class="dropdown"><a href="#"><span>مواقع التواصل الاجتماعي</span> <i
             class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
@@ -67,7 +67,7 @@ class="top-0 transition-transform duration-500 header align-items-center"
                         <li><a href="#">Dropdown 4</a></li>
                     </ul>
                 </li> --}}
-                <li><a href="contact.html">تواصل معنا </a></li>
+                <li><a href="#">تواصل معنا </a></li>
             </ul>
         </nav>
         <!-- .navbar -->

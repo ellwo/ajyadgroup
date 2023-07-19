@@ -105,7 +105,7 @@
               <div class="col-lg-2 col-md-3 footer-links ">
                 <h4>روابط مهمة</h4>
                 <ul>
-                  <li><a href="#">الرئيسية</a></li>
+                  <li><a href="{{ route('home') }}">الرئيسية</a></li>
                   <li><a href="# ">من نحن</a></li>
                   <li><a href="# ">خدماتنا</a></li>
                   <li><a href="# ">تواصل معنا</a></li>
