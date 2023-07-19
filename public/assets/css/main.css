@@ -1927,6 +1927,19 @@ section {
     }
 }
 
+@media (max-width: 360px) {
+    .hero .info {
+        top: 50%;
+        padding: 0 50px;
+    }
+    .hero .info p {
+        font-size: 12px !important;
+    }
+    .hero .info h2 {
+        font-size: 18px !important;
+    }
+}
+
 .hero .info h2 {
     color: #fff;
     margin-bottom: 30px;

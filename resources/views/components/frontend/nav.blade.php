@@ -19,7 +19,7 @@ class="top-0 transition-transform duration-500 header align-items-center"
                 'block':!scrollingDown && !scrollingUp
             }"
             class="text-center"
-            ><x-application-logo class="h-16 lg:h-24"/><span>
+            ><x-application-logo class="h-14 sm:h-16 lg:h-24"/><span>
             <x-app-name-text/>
             </span></h1>
             <h1
@@ -67,7 +67,11 @@ class="top-0 transition-transform duration-500 header align-items-center"
                         <li><a href="#">Dropdown 4</a></li>
                     </ul>
                 </li> --}}
-                <li><a href="#">تواصل معنا </a></li>
+                <li><a class="  @if (request()->routeIs('contact'))
+                    active
+                    @else
+
+                    @endif" href="{{ route('contact') }}">تواصل معنا </a></li>
             </ul>
         </nav>
         <!-- .navbar -->

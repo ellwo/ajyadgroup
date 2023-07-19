@@ -19,6 +19,12 @@ Route::get('/', function () {
     return view('pages.index');
 })->name('home');
 
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -90,7 +90,7 @@
                 <div class="pr-16 text-xl footer-i0nfo ">
                   <h3 class="text-center"><x-application-logo/>
                     <x-app-name-text/></h3>
-                  <p class="text-xl">
+                  <p class="text-sm md:text-xl">
 
                     قطاع تخليص التأشيرات أمام السفارة السعودية <br>
                     بجوار هيئة الاستثمار<br>صنعاء-اليمن  <br><br>
@@ -108,7 +108,7 @@
                   <li><a href="{{ route('home') }}">الرئيسية</a></li>
                   <li><a href="# ">من نحن</a></li>
                   <li><a href="# ">خدماتنا</a></li>
-                  <li><a href="# ">تواصل معنا</a></li>
+                  <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
                   <li><a href="# ">فروعنا</a></li>
                 </ul>
               </div><!-- End footer links column-->
