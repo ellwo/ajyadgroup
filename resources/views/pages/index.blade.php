@@ -95,7 +95,7 @@
                                 يمكنك ويسهولة متابعة حالة معاملة جوازك من اي مكان فقط ب ادخال رقم الجواز
                             </p>
                         </div>
-                                <form action="forms/quote.php" method="post" class="w-full text-center php-email-form lg:w-2/3">
+                                <div  class="w-full text-center php-email-form lg:w-2/3">
 
                                     <div class="py-0 m-0 section-header">
                                         <h4 class="text-lg font-bold md:text-2xl">قم بادخال رقم الجواز</h4>
@@ -118,7 +118,7 @@
                                         </div>
 
                                     </div>
-                                </form>
+                                </div>
 
                             </div>
 
@@ -176,7 +176,7 @@
                                     <h3>خدمات الحج والعمرة</h3>
                                     <p>
                                         نوفر لكم امكانية الحصول على تأشيرة حج او عمرة الى الاراضي المقدسة بافضل الوسائل المتاحة بأقل اسعار ممكنة.</p>
-                                        <a href="service-details.html" class="readmore stretched-link">اقراء المزيد <i
+                                        <a href="{{ route('service.show',1) }}"  class="readmore stretched-link">اقراء المزيد <i
                                             class="bi bi-arrow-left"></i></a>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                                     <h3>توظيف الايدي العاملة</h3>
                                     <p>
                                         </p>
-                                    <a href="service-details.html" class="readmore stretched-link">اقراء المزيد <i
+                                    <a href="{{ route('service.show',1) }}"  class="readmore stretched-link">اقراء المزيد <i
                                         class="bi bi-arrow-left"></i></a>
                                 </div>
                             </div>
@@ -205,7 +205,7 @@
                                     <h3>النقل الدولي والمحلي</h3>
                                     <p>
                                         </p>
-                                    <a href="service-details.html" class="readmore stretched-link">اقراء المزيد <i
+                                    <a href="{{ route('service.show',1) }}"  class="readmore stretched-link">اقراء المزيد <i
                                         class="bi bi-arrow-left"></i></a>
                                 </div>
                             </div>
@@ -220,7 +220,7 @@
                                     <h3>حجز تذاكر الطيران</h3>
                                     <p>
                                         </p>
-                                    <a href="service-details.html" class="readmore stretched-link">اقراء المزيد <i
+                                    <a href="{{ route('service.show',1) }}"  class="readmore stretched-link">اقراء المزيد <i
                                         class="bi bi-arrow-left"></i></a>
                                 </div>
                             </div>

@@ -198,7 +198,6 @@
     <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }} "></script>
     <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }} "></script>
     <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }} "></script>
-    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }} "></script>
     <script src="{{ asset('assets/vendor/owl/js/jquery.min.js') }} "></script>
 
     <script src="{{ asset('assets/vendor/owl/js/owl.carousel.min.js') }} "></script>
