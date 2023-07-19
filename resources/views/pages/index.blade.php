@@ -42,7 +42,7 @@
                        <div class="absolute inset-0 bg-dark bg-opacity-5 opacity-70"></div>
                        </div>
 
-                       <div class="relative h-screen bg-dark bg-opacity-5 " style="background-image: url(assets/img/hero-carousel/hero-carousel-4.jpg); background-size: cover;
+                       <div class="relative h-screen bg-dark bg-opacity-5 " style="background-image: url(assets/img/hero-carousel/hero-carousel-44.jpg); background-size: cover;
                        background-position: center;
                        background-repeat: no-repeat;
                        ">
