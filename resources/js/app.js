@@ -1,6 +1,9 @@
 import './bootstrap';
+import './custom';
 
 import Alpine from 'alpinejs';
+// import PerfectScrollbar from 'perfect-scrollbar';
+// window.PerfectScrollbar = PerfectScrollbar;
 
 
 
