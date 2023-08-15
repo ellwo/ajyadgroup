@@ -1169,6 +1169,10 @@ section {
     margin-top: 50px;
 }
 
+.alt-services .icon-box div {
+    margin: 10px;
+}
+
 .alt-services .icon-box i {
     display: flex;
     align-items: center;
@@ -1321,7 +1325,7 @@ section {
 .stats-counter .stats-item i {
     font-size: 42px;
     line-height: 0;
-    margin-right: 20px;
+    margin-left: 20px;
     color: var(--color-primary);
 }
 
@@ -1336,7 +1340,7 @@ section {
     padding: 0;
     margin: 0;
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: 20px;
 }
 
 

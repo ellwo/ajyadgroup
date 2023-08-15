@@ -118,48 +118,56 @@
 
 
     <section id="alt-services" class="alt-services">
-        <div class="container" data-aos="fade-up">
+        <div class="container m-4" data-aos="fade-up">
 
 
             <div class="py-0 m-0 mb-4 section-header">
                 <h2>من نحن ؟</h2>
 
             </div>
-            <div class="row justify-content-around gy-4 px-4">
-                <div class="col-lg-12 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
+            <div class="row justify-content-around gy-4 md:px-4">
+                {{-- <div class="col-lg-12 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div> --}}
 
                 <div class="col-lg-12 d-flex flex-column justify-content-center">
 
-                    <h3>مجموعة اجياد</h3>
-                    <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi</p>
+                    <div class=" md:p-8 ">
+
+
+                    <h2 class="text-2xl font-bold">مجموعة اجياد</h2>
+                    <p class=" w-3/4 md:text-lg text-sm">تأسست مجموعة أجياد في عام 2004م ودشنت نشاطها بتقديم خدمات الحج والعمرة ثم الأيدي العاملة وتخليص التأشيرات المتنوعة وتذاكر السفر..  مجموعة أجياد وفي ظل منافسة كبيرة وصعوبات شهدتها وتشهدها كل من سوق تخليص التأشيرات وخدمات الحج والعمرة في اليمن استطاعت في وقت قياسي أن تحقق حضوراً معتبراً داخل هذه السوق حتى صارت في الصدارة.</p>
+                </div>
+
+            <div class="bg-primary_color h-1 w-2/3  md:mx-4 mx-1 mt-1 md:mt-0 rounded-md">
+            </div>
 
 
 
+                    <div class="row m-0 p-0">
 
-                    <div class="row">
+                        <div class="col-lg-4">
 
-                        <div class="col-lg-3">
-
-                    <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box  d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
                         <i class="bi bi-easel flex-shrink-0"></i>
-                        <div>
-                            <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                        <div class="">
+                            <h4><a href="" class="stretched-link text-xl flex flex-col">الرؤية<div class="w-1/3 bg-primary_color h-0.5 rounded-md"></div></a></h4>
+                            <p class="text-sm md:text-xs">تميزت مجموعة اجياد لتنمية الخدات السياحية بعنايتها وحرصها على تقديم منتجاتها الخدمية بالصورة المثلى، فنالت بذلك ثقة ورضا عملائها.. ساعدها في ذلك الرؤية المستقبلية وامتلاك بنية تحتية متكاملة تنظيمياً وإدارياً يساهم بشكل مباشرفي أداء انشطة وإعمال المجموعة وفق أعلى معايير وأصول ومبادئ العمل المؤسسي.</p>
                         </div>
                     </div>
 
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
 
                             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
                                 <i class="bi bi-patch-check flex-shrink-0"></i>
                                 <div>
-                                    <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                                    <h4><a href="" class="stretched-link">ثقة والتزام <div class="w-1/3 bg-primary_color h-0.5 rounded-md"></div></a></h4>
+                                    <p>
+
+تعتبر مجموعة أجياد من الرواد في تقديم خدمات تخليص التأشيرات ومن ضمن اوائل المكاتب المعتمدة من قنصلية المملكة العربية السعودية منذ العام 2003 بترخيص رقم 17</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
 
                     <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
                         <i class="bi bi-brightness-high flex-shrink-0"></i>
@@ -170,17 +178,7 @@
                     </div>
 
                         </div>
-                        <div class="col-lg-3">
 
-
-                            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-                                <i class="bi bi-brightness-high flex-shrink-0"></i>
-                                <div>
-                                    <h4><a href="" class="stretched-link">Tride clov</a></h4>
-                                    <p>Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit non aspernatur odit amet. Et eligendi</p>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
 
@@ -203,15 +201,20 @@
     <section id="stats-counter" class="stats-counter section-bg">
         <div class="container">
 
-          <div class="row gy-4">
+
+            <div class="py-0 m-0 mb-4 section-header">
+                <h2>نعتز بأرقامنا </h2>
+
+            </div>
+          <div class="row gy-4 text-center flex justify-center">
 
             <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
                 <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                  <span data-purecounter-start="0" data-purecounter-end="23200" data-purecounter-duration="1"
                     class="purecounter"></span>
-                  <p>Happy Clients</p>
+                  <p>عميل سعيد</p>
                 </div>
               </div>
             </div><!-- End Stats Item -->
@@ -220,34 +223,25 @@
               <div class="stats-item d-flex align-items-center w-100 h-100">
                 <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                  <span data-purecounter-start="0" data-purecounter-end="52100" data-purecounter-duration="1"
                     class="purecounter"></span>
-                  <p>Projects</p>
+                  <p>معاملة منجزة</p>
                 </div>
               </div>
             </div><!-- End Stats Item -->
 
             <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i class="bi bi-headset color-green flex-shrink-0"></i>
+                <i class="fa fa-hands-helping color-green flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+                  <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1"
                     class="purecounter"></span>
-                  <p>Hours Of Support</p>
+                  <p>عام من الخبرة</p>
                 </div>
               </div>
             </div><!-- End Stats Item -->
 
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i class="bi bi-people color-pink flex-shrink-0"></i>
-                <div>
-                  <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                    class="purecounter"></span>
-                  <p>Hard Workers</p>
-                </div>
-              </div>
-            </div><!-- End Stats Item -->
+            <!-- End Stats Item -->
 
           </div>
 
