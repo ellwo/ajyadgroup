@@ -1,7 +1,7 @@
 
 <x-public-layout>
 
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/contact.png');">
+    <div class="breadcrumbs d-flex align-items-center bg-m_secondary" style=" ">
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
           <h2>اتصل بنا</h2>
@@ -86,4 +86,5 @@
         </div>
       </section><!-- End Contact Section -->
 
+      @include('pages.addresses.address-list')
 </x-public-layout>

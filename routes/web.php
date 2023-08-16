@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AddressController;
+use App\Http\Controllers\PassportInfoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +25,7 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
+Route::post('pass.search', [PassportInfoController::class,'search'])->name('pass.search');
 
 
 Route::get('/dashboard', function () {
@@ -37,5 +40,8 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/service/{id}',[ServiceController::class,'show'])->name('service.show');
+Route::get('/address',[AddressController::class,'index'])->name('address');
+Route::get('/address/{id}',[AddressController::class,'show'])->name('address.show');
 
 require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';

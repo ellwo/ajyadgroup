@@ -10,43 +10,23 @@ class="top-0 transition-transform duration-500 header align-items-center"
 >
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-        <a href="index.html" class="logo d-flex align-items-center">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="assets/img/logo.png" alt=""> -->
-            <h1
-            :class="{
-                'hidden ': scrollingDown,
-                'block':!scrollingDown && !scrollingUp
-            }"
-            class="text-center"
-            ><x-application-logo class="h-14 sm:h-16 lg:h-24"/><span>
-            <x-app-name-text/>
-            </span></h1>
-            <h1
-            :class="{
-                ' block': scrollingDown,
-                'hidden':!scrollingDown && !scrollingUp
-            }"
-            class="flex items-center justify-center text-center"
-            >
-           <img src="{{ asset('images/icon-logo.png') }}" class="h-12" alt="" srcset="">
-           <x-app-name-text/>
-           <span></span></h1>
-        </a>
-
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-        <nav id="navbar" class="navbar ">
+        <nav dir="rtl" id="navbar" class="navbar ">
             <ul>
                 <li><a href="{{ route('home') }}" class="
                     @if (request()->routeIs('home'))
                     active
                     @else
-
                     @endif
                     ">الرئسية</a></li>
-                <li><a href="#">من نحن</a></li>
+                <li><a href="@if(request()->routeIs('home'))#alt-services @endif">من نحن</a></li>
                 <li><a href="#">الخدمات</a></li>
+                <li><a class=" @if (request()->routeIs('address'))
+                    active
+                    @else
+                    @endif" href="{{ route('address') }}">فروعنا</a></li>
+
                 <li><a href="#">اخر الاخبار</a></li>
                 {{-- <li class="dropdown"><a href="#"><span>مواقع التواصل الاجتماعي</span> <i
             class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -74,6 +54,31 @@ class="top-0 transition-transform duration-500 header align-items-center"
                     @endif" href="{{ route('contact') }}">تواصل معنا </a></li>
             </ul>
         </nav>
+
+        <a href="{{ route('home' ) }}" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1
+            :class="{
+                'hidden ': scrollingDown,
+                'block':!scrollingDown && !scrollingUp
+            }"
+            class="text-center"
+            ><x-application-logo class="h-14 sm:h-16 lg:h-24"/><span>
+            <x-app-name-text/>
+            </span></h1>
+            <h1
+            :class="{
+                ' block': scrollingDown,
+                'hidden':!scrollingDown && !scrollingUp
+            }"
+            class="flex items-center justify-center text-center"
+            >
+           <img src="{{ asset('images/icon-logo.png') }}" class="h-12" alt="" srcset="">
+           <x-app-name-text/>
+           <span></span></h1>
+        </a>
+
         <!-- .navbar -->
 
     </div>

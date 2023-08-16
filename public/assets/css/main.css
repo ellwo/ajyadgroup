@@ -248,6 +248,16 @@ section {
     overflow: hidden;
     background: #fff;
     transition: all 0.6s ease-out;
+    padding: 30px;
+}
+
+#preloader2 {
+    position: absolute;
+    inset: 0;
+    z-index: 999999;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.6s ease-out;
 }
 
 #preloader:before {
@@ -280,6 +290,20 @@ section {
     100% {
         transform: rotate(360deg);
     }
+}
+
+#preloader2:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 20px);
+    right: calc(50% - 20px);
+    border: 3px solid #fff;
+    border-color: var(--color-primary) transparent var(--color-primary) transparent;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: animate-preloader 1.5s linear infinite;
+    animation: animate-preloader 1.5s linear infinite;
 }
 
 
@@ -556,6 +580,12 @@ section {
         inset: 0;
         background: rgba(0, 0, 0, 0.6);
         z-index: 9996;
+    }
+    .breadcrumbs h2 {
+        font-size: 28px;
+        font-weight: 500;
+        color: #fff;
+        font-family: var(--font-secondary);
     }
 }
 
@@ -1683,8 +1713,8 @@ section {
 }
 
 .service-details ul i {
-    font-size: 20px;
-    margin-right: 8px;
+    font-size: 18px;
+    margin-left: 8px;
     color: var(--color-primary);
 }
 
@@ -1929,9 +1959,43 @@ section {
     .hero .info {
         padding: 0 50px;
     }
+    .service-details h3 {
+        font-size: 19px;
+        font-weight: 700;
+    }
+    .service-details ul {
+        list-style: none;
+        padding: 0;
+        font-size: 12px;
+    }
+    .section-header h2 {
+        font-size: 24px;
+        font-weight: 700;
+        position: relative;
+        color: #2e3135;
+    }
 }
 
 @media (max-width: 360px) {
+    .hero .info {
+        top: 50%;
+        padding: 0 50px;
+    }
+    .hero .info p {
+        font-size: 12px !important;
+    }
+    .hero .info h2 {
+        font-size: 18px !important;
+    }
+    .breadcrumbs h2 {
+        font-size: 28px;
+        font-weight: 500;
+        color: #fff;
+        font-family: var(--font-secondary);
+    }
+}
+
+@media (max-width: 390px) {
     .hero .info {
         top: 50%;
         padding: 0 50px;
@@ -1973,8 +2037,12 @@ section {
 }
 
 .hero .info p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #fff;
     font-size: 18px;
+}
+
+#passportresult {
+    background-size: contain;
 }
 
 .hero .info .btn-get-started {

@@ -79,7 +79,10 @@
                             يمكنك ويسهولة متابعة حالة معاملة جوازك من اي مكان فقط ب ادخال رقم الجواز
                         </p>
                     </div>
-                    <div class="w-full text-center php-email-form lg:w-2/3">
+
+                    <form onsubmit="ajxaproform(event,this,'{{ route('pass.search') }}')" method="POST" class="w-full text-center php-email-form lg:w-2/3">
+
+                        @csrf
 
                         <div class="py-0 m-0 section-header">
                             <h4 class="text-lg font-bold md:text-2xl">قم بادخال رقم الجواز</h4>
@@ -100,11 +103,18 @@
                                 <div class="sent-message">Your quote request has been sent successfully. Thank you!
                                 </div>
 
-                                <button type="submit">بحث <i class="fa fa-search"></i></button>
+                                <button class="relative" id='btnsubmit' type="submit">بحث <i class="fa fa-search"></i></button>
+                                <div id="search_con" class="">
+
+                                </div>
+
                             </div>
 
                         </div>
-                    </div>
+                    </form>
+
+
+
 
                 </div>
 
@@ -130,35 +140,35 @@
 
                 <div class="col-lg-12 d-flex flex-column justify-content-center">
 
-                    <div class=" md:p-8 ">
+                    <div class=" md:p-8">
 
 
                     <h2 class="text-2xl font-bold">مجموعة اجياد</h2>
-                    <p class=" w-3/4 md:text-lg text-sm">تأسست مجموعة أجياد في عام 2004م ودشنت نشاطها بتقديم خدمات الحج والعمرة ثم الأيدي العاملة وتخليص التأشيرات المتنوعة وتذاكر السفر..  مجموعة أجياد وفي ظل منافسة كبيرة وصعوبات شهدتها وتشهدها كل من سوق تخليص التأشيرات وخدمات الحج والعمرة في اليمن استطاعت في وقت قياسي أن تحقق حضوراً معتبراً داخل هذه السوق حتى صارت في الصدارة.</p>
+                    <p class="w-3/4 text-sm md:text-lg">تأسست مجموعة أجياد في عام 2004م ودشنت نشاطها بتقديم خدمات الحج والعمرة ثم الأيدي العاملة وتخليص التأشيرات المتنوعة وتذاكر السفر..  مجموعة أجياد وفي ظل منافسة كبيرة وصعوبات شهدتها وتشهدها كل من سوق تخليص التأشيرات وخدمات الحج والعمرة في اليمن استطاعت في وقت قياسي أن تحقق حضوراً معتبراً داخل هذه السوق حتى صارت في الصدارة.</p>
                 </div>
 
-            <div class="bg-primary_color h-1 w-2/3  md:mx-4 mx-1 mt-1 md:mt-0 rounded-md">
+            <div class="w-2/3 h-1 mx-1 mt-1 rounded-md bg-primary_color md:mx-4 md:mt-0">
             </div>
 
 
 
-                    <div class="row m-0 p-0">
+                    <div class="p-0 m-0 row">
 
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
 
-                    <div class="icon-box  d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
-                        <i class="bi bi-easel flex-shrink-0"></i>
+                    <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+                        <i class="flex-shrink-0 bi bi-easel"></i>
                         <div class="">
-                            <h4><a href="" class="stretched-link text-xl flex flex-col">الرؤية<div class="w-1/3 bg-primary_color h-0.5 rounded-md"></div></a></h4>
+                            <h4><a href="" class="flex flex-col text-xl stretched-link">الرؤية<div class="w-1/3 bg-primary_color h-0.5 rounded-md"></div></a></h4>
                             <p class="text-sm md:text-xs">تميزت مجموعة اجياد لتنمية الخدات السياحية بعنايتها وحرصها على تقديم منتجاتها الخدمية بالصورة المثلى، فنالت بذلك ثقة ورضا عملائها.. ساعدها في ذلك الرؤية المستقبلية وامتلاك بنية تحتية متكاملة تنظيمياً وإدارياً يساهم بشكل مباشرفي أداء انشطة وإعمال المجموعة وفق أعلى معايير وأصول ومبادئ العمل المؤسسي.</p>
                         </div>
                     </div>
 
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
 
                             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
-                                <i class="bi bi-patch-check flex-shrink-0"></i>
+                                <i class="flex-shrink-0 bi bi-patch-check"></i>
                                 <div>
                                     <h4><a href="" class="stretched-link">ثقة والتزام <div class="w-1/3 bg-primary_color h-0.5 rounded-md"></div></a></h4>
                                     <p>
@@ -167,17 +177,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
 
-                    <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bi bi-brightness-high flex-shrink-0"></i>
-                        <div>
-                            <h4><a href="" class="stretched-link">Dine Pad</a></h4>
-                            <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
-                        </div>
-                    </div>
-
-                        </div>
 
 
                     </div>
@@ -206,11 +206,11 @@
                 <h2>نعتز بأرقامنا </h2>
 
             </div>
-          <div class="row gy-4 text-center flex justify-center">
+          <div class="flex justify-center text-center row gy-4">
 
             <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+                <i class="flex-shrink-0 bi bi-emoji-smile color-blue"></i>
                 <div>
                   <span data-purecounter-start="0" data-purecounter-end="23200" data-purecounter-duration="1"
                     class="purecounter"></span>
@@ -221,7 +221,7 @@
 
             <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+                <i class="flex-shrink-0 bi bi-journal-richtext color-orange"></i>
                 <div>
                   <span data-purecounter-start="0" data-purecounter-end="52100" data-purecounter-duration="1"
                     class="purecounter"></span>
@@ -232,7 +232,7 @@
 
             <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i class="fa fa-hands-helping color-green flex-shrink-0"></i>
+                <i class="flex-shrink-0 fa fa-hands-helping color-green"></i>
                 <div>
                   <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1"
                     class="purecounter"></span>
@@ -380,6 +380,9 @@
 
 
     <x-slot name="script">
+
+
+  <script src="{{ asset('assets/js/search_pass.js') }}"></script>
         <script type="text/javascript">
             $('.home-slider').owlCarousel({
                 loop: true,
