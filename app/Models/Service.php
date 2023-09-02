@@ -12,4 +12,12 @@ class Service extends Model
         'titel','img','note'
     ];
 
+
+
+    function service_parts(){
+
+        return $this->hasMany(ServicePart::class);
+
+    }
+
 }

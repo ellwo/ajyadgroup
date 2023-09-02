@@ -14,6 +14,10 @@ class Address extends Model
       'city_id'
     ];
 
+    protected $casts=[
+        'phone'=>'array'
+       ];
+
 
     function city() {
         return $this->belongsTo(City::class);

@@ -1,19 +1,19 @@
 @extends('backend.layouts.backend-layout', ['class' => 'g-sidenav-show bg-gray-100 rtl',
-'title'=>'ادارة الخدمات'  ])
+'title'=>'ادارة شركاؤنا'  ])
  @section('content')
 
    <!-- End Navbar -->
    <div class="py-4 container-fluid">
     <div class="my-4 row">
-        <div class="mx-auto mb-4 col-lg-8 col-md-6 mb-md-0">
+        <div class="mx-auto mb-4 col-lg-8 col-md-10 mb-md-0">
             <div class="card">
                 <div dir="rtl" class="pb-0 card-header">
                     <div class="mb-3 row">
                         <div class="col-6">
-                            <h6>الخدمات </h6>
+                            <h6>شركاؤنا </h6>
                             <p class="text-sm">
 
-<a href="{{ route('services.create') }}" class="btn bg-gradient-info btn-sm">اضافة خدمة جديدة <i class="fa fa-plus"></i></a>
+<a href="{{ route('companies.create') }}" class="btn bg-gradient-info btn-sm">اضافة شركاؤنا  <i class="fa fa-plus"></i></a>
 <x-auth-session-status class="mb-4" class="alert-primary" :title="session('title')??'ملاحظة !'" :status="session('status')" />
 
                             </p>
@@ -36,15 +36,15 @@
                     </div>
                 </div>
                 <div class="p-0 pb-2 card-body">
-                    <div class="table-responsive">
+                    <div class="table-">
                         <table dir="rtl" class="table mb-0 ">
                             <thead>
                                 <tr>
                                     <th class="text-lg text-uppercase text-secondary font-weight-bolder opacity-7">
-                                        الخدمة</th>
+                                        الصورة \ الشعار</th>
                                     <th
                                         class="text-lg text-uppercase text-secondary font-weight-bolder opacity-7 ps-2">
-                                        عدد فئات الحدمة</th>
+                                    معلومات</th>
                                     <th
                                         class="text-lg text-center text-uppercase text-secondary font-weight-bolder opacity-7">
                                         ادارة</th>
@@ -52,26 +52,52 @@
                             </thead>
                             <tbody>
 
-                                @foreach ($services as $se)
+                                @foreach ($companies as $se)
                                 <tr>
                                     <td>
-                                        <div class="px-2 py-1 d-flex">
-                                            <div>
-                                                <i
-                                                class="{{ $se->img }} mx-2"></i>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-sm">{{ $se->titel }}</h6>
-                                            </div>
-                                        </div>
-                                    </td>
+
+
+                                        <img height="75px" style="height: 75px;" src="{{ $se->img }}" alt=""
+                                        srcset="" class="img-thumbnail  me-3">                                    </td>
                                     <td>
 
-    <span class="badge bg-gradient-primary">10</span>
+                                        {{ $se->name }}
+                                        <br>
+                                        @if ($se->link!="#")
+                                        <a href="{{ $se->link }}"> {{ $se->link }}</a>
+
+                                        @endif
                                     </td>
                                     <td dir="ltr" class="">
+
+
+                                        <div class="my-auto col-6 text-start">
+                                            <div class="dropdown float-start ps-4">
+                                                <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <i class="fa fa-ellipsis-v text-secondary"></i>
+                                                </a>
+                                                <ul class="px-2 py-3 dropdown-menu me-n4" aria-labelledby="dropdownTable">
+                                                    <li><a class="dropdown-item border-radius-md " href="{{ route('companies.edit',$se->id) }}">تعديل <i class="fa fa-edit"></i></a></li>
+                                                    <li><a class="dropdown-item border-radius-md" href="{{ route('companies.show',$se->id) }}">عرض <i class="fa fa-eye"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <form action="{{ route('companies.destroy',$se) }}"
+                                                         method="post">
+                                                         @method('DELETE')
+                                                         @csrf
+                                                         <button class="dropdown-item border-radius-md" href="javascript:;">
+                                                            حذف <i class="fa fa-delete"></i>
+                                                         </button>
+                                                        </form>
+                                                        </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                         {{-- <div class="mx-auto progress-wrapper w-75">
                                             <div class="progress-info">
+
                                                 <div class="progress-percentage">
                                                     <span class="text-xs font-weight-bold">{{ $se->id }}</span>
                                                 </div>
@@ -82,10 +108,6 @@
                                             </div>
                                         </div> --}}
 
-                                        <button type="button" class="btn bg-gradient-danger btn-sm">حذف <i class="fa fa-delete"></i></button>
-<a href="{{ route('services.edit',$se->id) }}" class="btn btn-outline-warning btn-sm">تعديل <i class="fa fa-edit"></i></a>
-
-<a href="{{ route('services.show',$se->id) }}" class="btn btn-outline-success btn-sm">عرض <i class="fa fa-eye"></i></a>
 
 </td>
                                 </tr>

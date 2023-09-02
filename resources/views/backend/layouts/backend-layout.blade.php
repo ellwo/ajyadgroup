@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <!-- Favicons --><link rel="icon" href="{{ asset('images/icon-logo.png') }}" sizes="192x192">
      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>
         {{ "لوحة التحكم - ".($title ?? "") }}
@@ -52,16 +53,15 @@
                     data-scroll="false">
                     <div class="px-3 py-1 container-fluid">
                         <nav aria-label="breadcrumb">
-                            <ol class="px-0 pt-1 pb-0 mb-0 bg-transparent breadcrumb ">
-                                <li class="text-sm breadcrumb-item ps-2"><a class="text-white opacity-5" href="javascript:;">لوحات
+                            <ol dir="rtl" class="px-0 pt-1 pb-0 mb-0 bg-transparent breadcrumb ">
+                                <li class="text-sm breadcrumb-item ps-2"><a class="text-white opacity-5" href="javascript:;">لوحة
                                         القيادة</a></li>
-                                <li class="text-sm text-white breadcrumb-item active" aria-current="page">RTL</li>
+                                <li class="text-sm text-white breadcrumb-item active" aria-current="page">{{ ($title ?? "") }}</li>
                             </ol>
-                            <h6 class="mb-0 text-white font-weight-bolder">RTL</h6>
                         </nav>
                         <div class="px-0 mt-2 collapse navbar-collapse mt-sm-0" id="navbar">
                             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-                                <div class="input-group">
+                                <div dir="rtl" class="input-group">
                                     <span class="input-group-text text-body"><i class="fas fa-search"
                                             aria-hidden="true"></i></span>
                                     <input type="text" class="form-control" placeholder="أكتب هنا...">
@@ -185,6 +185,8 @@
     <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/owl/js/jquery.min.js') }} "></script>
+
     <script>
         var win = navigator.platform.indexOf('Win') > -1;
         if (win && document.querySelector('#sidenav-scrollbar')) {

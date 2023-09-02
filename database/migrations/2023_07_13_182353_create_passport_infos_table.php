@@ -23,7 +23,6 @@ return new class extends Migration
             $table->date('received_date')->nullable();
             $table->date('sending_embassy_date')->nullable();
             $table->date('delivery_date')->nullable();
-
             $table->timestamps();
         });
     }

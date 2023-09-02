@@ -148,7 +148,11 @@ id="sidenav-main">
 <div class="w-auto px-0 collapse navbar-collapse " id="sidenav-collapse-main">
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link " href="{{ route('home') }}">
+            <a class="nav-link
+            @if (request()->routeIs('dashboard'))
+            active
+            @endif
+            " href="{{ route('dashboard') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
                     <i class="text-sm ni ni-tv-2 text-primary opacity-10"></i>
@@ -157,34 +161,46 @@ id="sidenav-main">
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="{{ route('services') }}">
+            <a class="nav-link @if(request()->routeIs('services'))
+                active
+            @endif" href="{{ route('services') }}">
                 <div
-                    class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
+                    class="text-center  icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
                     <i class="text-sm ni ni-calendar-grid-58 text-warning opacity-10"></i>
                 </div>
                 <span class="nav-link-text me-1">الخدمات</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="#">
+            <a class="nav-link
+            @if(request()->routeIs('companies'))
+                active
+            @endif
+            " href="{{ route('companies') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
                     <i class="text-sm ni ni-credit-card text-success opacity-10"></i>
                 </div>
-                <span class="nav-link-text me-1">الفواتير</span>
+                <span class="nav-link-text me-1">شركاؤنا</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="#">
+            <a class="nav-link
+
+            @if (request()->routeIs('addresses'))
+
+            active
+            @endif
+            " href="{{ route('addresses') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
                     <i class="text-sm ni ni-app text-info opacity-10"></i>
                 </div>
-                <span class="nav-link-text me-1">الواقع الافتراضي</span>
+                <span class="nav-link-text me-1">ادارة الفروع</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#">
+            <a class="nav-link " href="#">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
                     <i class="text-sm ni ni-world-2 text-danger opacity-10"></i>
@@ -223,22 +239,5 @@ id="sidenav-main">
             </a>
         </li>
     </ul>
-</div>
-<div class="mx-3 sidenav-footer ">
-    <div class="shadow-none card card-plain" id="sidenavCard">
-        <img class="mx-auto w-50" src="/img/illustrations/icon-documentation.svg"
-            alt="sidebar_illustration">
-        <div class="p-3 pt-0 text-center card-body w-100">
-            <div class="docs-info">
-                <h6 class="mb-0 text-center">تحتاج مساعدة?</h6>
-                <p class="mb-0 text-xs text-center font-weight-bold">يرجى التحقق من مستنداتنا</p>
-            </div>
-        </div>
-    </div>
-    <a href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard" target="_blank"
-        class="mb-3 btn btn-dark btn-sm w-100">توثيق</a>
-    <a class="mb-0 btn btn-primary btn-sm w-100"
-        href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=sidebarfree" type="button">التطور
-        للاحترافية</a>
 </div>
 </aside>

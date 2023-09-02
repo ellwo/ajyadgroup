@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\City;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,5 +22,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+
+
+        $cities=Cache::remember('cities',3600*60*60,function(){
+            return City::all();
+        });
+
+        view()->share('cities',$cities);
     }
 }

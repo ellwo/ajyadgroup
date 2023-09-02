@@ -91,7 +91,7 @@
                         <div class="w-full ">
 
                             <div class="w-full">
-                                <input type="text" name="name"
+                                <input type="text" name="pass_num"
                                     class="w-full p-2 font-bold border rounded-md md:w-2/3 md:text-2xl focus:border-blue-600"
                                     placeholder="رقم الجواز" required>
                             </div>
