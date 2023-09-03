@@ -24,6 +24,17 @@
     <!-- CSS Files -->
     @vite([ 'resources/js/app.js','resources/scss/argon-dashboard.scss'])
 
+
+    <style>
+        .h-64{
+            height: 82px;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+
+
 </head>
 
 <body class="{{ $class ?? '' }}">

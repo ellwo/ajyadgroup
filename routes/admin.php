@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\AddressController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\CompanyController;
+use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\UploadeController;
 use App\Http\Controllers\DashBoradController;
 use App\Http\Controllers\PassportInfoController;
 use Illuminate\Http\Request;
@@ -19,8 +21,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/addresses',AddressController::class)->name('index','addresses');
     Route::resource('/passportinfos',PassportInfoController::class)->name('index','passportinfos');
     Route::post('/pass.createex',[PassportInfoController::class,'createx'])->name('pass.createex');
+    Route::resource('/posts',PostController::class)->name('index','posts');
 
-
+    Route::post('/image-upload',[UploadeController::class,'storeImage'])->name('image.upload');
 });
 
 Route::get('/dashboard',[DashBoradController::class,'index'] )->middleware(['auth', 'verified'])->name('dashboard');

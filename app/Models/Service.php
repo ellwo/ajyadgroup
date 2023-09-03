@@ -14,7 +14,7 @@ class Service extends Model
 
 
 
-    function service_parts(){
+   public function service_parts(){
 
         return $this->hasMany(ServicePart::class);
 

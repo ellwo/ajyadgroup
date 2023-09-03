@@ -39,6 +39,7 @@ class ServiceController extends Controller
     public function show(Service $service)
     {
 
+      //  return dd($service->service_parts);
         return view('pages.services.show',['service'=>$service]);
         //
     }

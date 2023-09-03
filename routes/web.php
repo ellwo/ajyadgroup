@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PassportInfoController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -17,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-})->name('home');
+Route::get('/', [HomeController::class,'index'])->name('home');
 
 Route::get('/contact', function () {
     return view('pages.contact');
@@ -35,9 +35,10 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/service/{id}',[ServiceController::class,'show'])->name('service.show');
+Route::resource('service',ServiceController::class)->name('index','service');
 Route::get('/address',[AddressController::class,'index'])->name('address');
 Route::get('/address/{id}',[AddressController::class,'show'])->name('address.show');
+Route::resource('/post',PostController::class)->name('index','post');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

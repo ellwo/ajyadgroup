@@ -141,7 +141,8 @@ id="sidenav-main">
     <a class="m-0 navbar-brand" href=""
         target="_blank">
         <x-application-logo class="navbar-brand-img h-100" alt="main_logo"/>
-        <span class="me-1 font-weight-bold"><x-app-name-text/></span>
+        <br>
+        <span class="mx-auto text-center me-1 font-weight-bold"><x-app-name-text/></span>
     </a>
 </div>
 <hr class="mt-0 horizontal dark">
@@ -165,7 +166,7 @@ id="sidenav-main">
                 active
             @endif" href="{{ route('services') }}">
                 <div
-                    class="text-center  icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
+                    class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
                     <i class="text-sm ni ni-calendar-grid-58 text-warning opacity-10"></i>
                 </div>
                 <span class="nav-link-text me-1">الخدمات</span>
@@ -200,12 +201,17 @@ id="sidenav-main">
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="#">
+            <a class="nav-link
+
+            @if (request()->routeIs('posts'))
+                active
+            @endif
+            " href="{{ route('posts') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
                     <i class="text-sm ni ni-world-2 text-danger opacity-10"></i>
                 </div>
-                <span class="nav-link-text me-1">RTL</span>
+                <span class="nav-link-text me-1">الاخبار</span>
             </a>
         </li>
         <li class="mt-3 nav-item">
