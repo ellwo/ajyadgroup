@@ -10,7 +10,7 @@
 
             <h2>فروعنا</h2>
             <ol>
-                <li><a href="{{ route('home') }}">الرئسية</a></li>
+                <li><a href="{{ route('home') }}">الرئيسية</a></li>
                 <li>فروعنا</li>
             </ol>
 

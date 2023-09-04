@@ -10,7 +10,7 @@
 
             <h2>خدمات تخليص التأشيرات</h2>
             <ol>
-                <li><a href="{{ route('home') }}">الرئسية</a></li>
+                <li><a href="{{ route('home') }}">الرئيسية</a></li>
                 <li><a href="{{ route('service') }}">الخدمات</a></li>
                 <li>{{ $service->titel }}</li>
             </ol>

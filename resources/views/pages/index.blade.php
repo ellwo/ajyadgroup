@@ -288,63 +288,6 @@
                 @endforeach
                 <!-- End Service Item -->
 
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-item position-relative">
-                        <div class="icon">
-                            <i class="fa-solid fa-mosque"></i>
-                        </div>
-                        <h3>خدمات الحج والعمرة</h3>
-                        <p>
-                            نوفر لكم امكانية الحصول على تأشيرة حج او عمرة الى الاراضي المقدسة بافضل الوسائل المتاحة بأقل
-                            اسعار ممكنة.</p>
-                        <a href="{{ route('service.show', 1) }}" class="readmore stretched-link">اقراء المزيد <i
-                                class="bi bi-arrow-left"></i></a>
-                    </div>
-                </div>
-                <!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-item position-relative">
-                        <div class="icon">
-                            <i class="fa fa-hands-helping"></i>
-                        </div>
-                        <h3>توظيف الايدي العاملة</h3>
-                        <p>
-                        </p>
-                        <a href="{{ route('service.show', 1) }}" class="readmore stretched-link">اقراء المزيد <i
-                                class="bi bi-arrow-left"></i></a>
-                    </div>
-                </div>
-                <!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-item position-relative">
-                        <div class="icon">
-
-                            <i class="fa-solid fa-bus"></i>
-                        </div>
-                        <h3>النقل الدولي والمحلي</h3>
-                        <p>
-                        </p>
-                        <a href="{{ route('service.show', 1) }}" class="readmore stretched-link">اقراء المزيد <i
-                                class="bi bi-arrow-left"></i></a>
-                    </div>
-                </div>
-                <!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-item position-relative">
-                        <div class="icon">
-
-                            <i class="fa fa-plane-circle-check"></i>
-                        </div>
-                        <h3>حجز تذاكر الطيران</h3>
-                        <p>
-                        </p>
-                        <a href="{{ route('service.show', 1) }}" class="readmore stretched-link">اقراء المزيد <i
-                                class="bi bi-arrow-left"></i></a>
-                    </div>
-                </div>
                 <!-- End Service Item -->
 
                 <!-- End Service Item -->
@@ -362,19 +305,22 @@
 
         <div class="container" data-aos="fade-up">
 
-            <header class="section-header">
+            <header class="py-1 mb-1 section-header">
                 <h2>شركاؤنا</h2>
             </header>
 
-            <div class="clients-slider swiper">
+            <div  class="clients-slider swiper">
                 <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid"
-                            alt=""></div>
-                    <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid"
-                            alt=""></div>
-                    <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid"
-                            alt=""></div>
-                </div>
+
+                    @foreach ($companies as $co)
+                    <div class="swiper-slide">
+                        <img src="{{ $co->img }}" class="img-fluid"
+                            alt="">
+                        </div>
+                    @endforeach
+
+
+                        </div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
@@ -384,27 +330,28 @@
 
 
 
-  <div class=" section-header">
+  <div class="p-0 mb-0 section-header">
         <h2>اخر الاخبار</h2>
-        <p></p>
+        <p>نبقيكم على إطلاع دائم
+            نحرص دائما على ان نمدكم بكل جديد ومهم من أخبار في مجال عملنا</p>
       </div>
 
-      <div class="row gy-5 ">
+      <div class="flex items-center justify-center row" align='center'>
 
 
 
         @foreach ($posts as $p)
-        <div class="col-xl-4 col-md-6 " data-aos="fade-up " data-aos-delay="100 ">
+        <div class=" col-xl-3 col-md-6" data-aos="fade-up " data-aos-delay="100 ">
             <div class="post-item position-relative h-100 ">
 
               <div class="overflow-hidden post-img position-relative ">
                 <img src="{{ $p->img }}" class="img-fluid " alt=" ">
-                <span class="post-date ">{{ $p->created_at }}</span>
+                <span dir="ltr" class="post-date text-m_secondary ">{{ $p->created_at }}</span>
               </div>
 
               <div class="post-content d-flex flex-column ">
 
-                <h3 class="post-title ">{{ $p->titel }}</h3>
+                <h3 class="text-lg post-title">{{ $p->titel }}</h3>
 
                 <div class="meta d-flex align-items-center ">
                   <div class="d-flex align-items-center ">

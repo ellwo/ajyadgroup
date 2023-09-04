@@ -29,6 +29,15 @@ class PassportInfoController extends Controller
 
     public function search(Request $requset){
 
+
+
+        if($requset->isMethod('GET'))
+        return view('pages.passportinfos.search');
+
+
+
+
+
         $res=PassportInfo::where('pass_num','=',$requset['pass_num'])
         ->first();
 

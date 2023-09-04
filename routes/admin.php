@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
 
+
+Route::get('/',[DashBoradController::class,'index'] )->middleware(['auth', 'verified'])->name('dashboard.admin');
+
     Route::post('/uploade',[\App\Http\Controllers\Admin\UploadeController::class,'store'])->name('uploade');
 
     Route::resource('/services',ServiceController::class)->name('index','services');

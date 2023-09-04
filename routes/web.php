@@ -26,7 +26,8 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::post('pass.search', [PassportInfoController::class,'search'])->name('pass.search');
-
+Route::get('/pass.search.get', [PassportInfoController::class,'search'])->name('pass.search.get');
+Route::view('/من-نحن','pages.about-us')->name('about-us');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

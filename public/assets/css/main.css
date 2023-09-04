@@ -16,7 +16,7 @@
 
 :root {
     --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-primary: "Roboto", sans-serif;
+    --font-primary: "Cairo", sans-serif;
     --font-secondary: "Work Sans", sans-serif;
 }
 
@@ -72,7 +72,7 @@ h6 {
 --------------------------------------------------------------*/
 
 section {
-    padding: 80px 0;
+    padding: 80px;
     overflow: hidden;
 }
 
@@ -260,6 +260,15 @@ section {
     transition: all 0.6s ease-out;
 }
 
+.loading {
+    position: absolute;
+    inset: 0;
+    z-index: 999999;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.6s ease-out;
+}
+
 #preloader:before {
     content: "";
     position: fixed;
@@ -293,6 +302,20 @@ section {
 }
 
 #preloader2:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 20px);
+    right: calc(50% - 20px);
+    border: 3px solid #fff;
+    border-color: var(--color-primary) transparent var(--color-primary) transparent;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: animate-preloader 1.5s linear infinite;
+    animation: animate-preloader 1.5s linear infinite;
+}
+
+.loading:before {
     content: "";
     position: absolute;
     top: calc(50% - 20px);
@@ -586,6 +609,10 @@ section {
         font-weight: 500;
         color: #fff;
         font-family: var(--font-secondary);
+    }
+    .breadcrumbs ol {
+        font-size: 14px;
+        margin-top: 7px;
     }
 }
 
@@ -1251,9 +1278,9 @@ section {
 --------------------------------------------------------------*/
 
 .about h2 {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
     margin: 30px 0;
 }
 
@@ -1271,7 +1298,7 @@ section {
 
 @media (min-width: 991px) {
     .about .our-story {
-        padding-right: 35%;
+        padding-left: 35%;
     }
 }
 
@@ -1337,7 +1364,7 @@ section {
     .about .about-img {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
     }
 }
 
@@ -1877,11 +1904,10 @@ section {
 }
 
 .recent-blog-posts .post-item .post-content {
-    padding: 30px;
+    padding: 10px;
 }
 
 .recent-blog-posts .post-item .post-title {
-    font-size: 24px;
     color: var(--color-secondary);
     font-weight: 700;
     transition: 0.3s;
@@ -1992,6 +2018,10 @@ section {
         font-weight: 500;
         color: #fff;
         font-family: var(--font-secondary);
+    }
+    .breadcrumbs ol {
+        font-size: 14px;
+        margin-top: 7px;
     }
 }
 

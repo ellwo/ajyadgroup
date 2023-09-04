@@ -14,6 +14,8 @@ class ServiceController extends Controller
     {
         //
 
+        $services=Service::paginate(10);
+        return view('pages.services.index',['services'=>$services]);
 
     }
 

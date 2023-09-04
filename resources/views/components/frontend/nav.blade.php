@@ -2,8 +2,8 @@
 <header dir="ltr" style="direction: ltr !important;" id="header"
 class="top-0 transition-transform duration-500 header align-items-center"
 :class="{
-    'fixed bg-base-30': scrollingDown,
-    'fixed hidden translate-y-0': scrollingUp,
+    ' hidden translate-y-0': scrollingDown,
+    'fixed bg-base-30': scrollingUp,
     'fixed ':!scrollingDown && !scrollingUp
 }"
 
@@ -13,21 +13,36 @@ class="top-0 transition-transform duration-500 header align-items-center"
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <nav dir="rtl" id="navbar" class="navbar ">
+
             <ul>
                 <li><a href="{{ route('home') }}" class="
                     @if (request()->routeIs('home'))
                     active
                     @else
                     @endif
-                    ">الرئسية</a></li>
-                <li><a href="@if(request()->routeIs('home'))#alt-services @endif">من نحن</a></li>
-                <li><a href="#">الخدمات</a></li>
+                    ">الرئيسية</a></li>
+                    <li><a class="{{ request()->routeIs('about-us')?'active':'' }}" href="{{(request()->routeIs('home')||request()->routeIs('about-us'))?'#alt-services':route('about-us')}}">من نحن</a></li>
+                    <li><a href="{{(request()->routeIs('home')||request()->routeIs('pass.search.get'))?'#get-started':route('pass.search.get',['key'=>'الاستعلام-عن-حالة-جواز'])}}"
+                        class="{{ request()->routeIs('pass.search.get')?'active':'' }}"
+                        >الاستعلام عن جواز</a></li>
+
+                <li><a href="{{request()->routeIs('home')?'#services': route('service')}}"
+
+                    class="@if (request()->routeIs('service'))
+                    active
+                    @else
+                    @endif">الخدمات</a></li>
                 <li><a class=" @if (request()->routeIs('address'))
                     active
                     @else
                     @endif" href="{{ route('address') }}">فروعنا</a></li>
 
-                <li><a href="#">اخر الاخبار</a></li>
+                <li><a class="@if (request()->routeIs('post'))
+                    active
+                    @else
+                    @endif" href="{{ route('post') }}">اخر الاخبار</a></li>
+
+
                 {{-- <li class="dropdown"><a href="#"><span>مواقع التواصل الاجتماعي</span> <i
             class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
@@ -60,7 +75,7 @@ class="top-0 transition-transform duration-500 header align-items-center"
             <!-- <img src="assets/img/logo.png" alt=""> -->
             <h1
             :class="{
-                'hidden ': scrollingDown,
+                'hidden ': scrollingUp,
                 'block':!scrollingDown && !scrollingUp
             }"
             class="text-center"

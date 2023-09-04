@@ -25,12 +25,19 @@
     @vite([ 'resources/js/app.js','resources/scss/argon-dashboard.scss'])
 
 
+    <link rel="stylesheet" href="{{ asset('assets/css/custom-argon.css') }}">
+
     <style>
+
+
         .h-64{
-            height: 82px;
+            width: 100% !important;
         }
         img{
             width: 100%;
+        }
+        .hidden{
+            display: none;
         }
     </style>
 
@@ -38,7 +45,6 @@
 </head>
 
 <body class="{{ $class ?? '' }}">
-
 
 
 

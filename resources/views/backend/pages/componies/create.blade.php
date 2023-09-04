@@ -18,7 +18,7 @@
                         </div>
                         <div class="my-auto col-6 text-start">
 
-<button type="button" class="btn bg-gradient-info btn-sm">عودة الى القائمة <i class="fa fa-arrow-left"></i></button>
+<a href="{{ route('companies') }}" class="btn bg-gradient-info btn-sm">عودة الى القائمة <i class="fa fa-arrow-left"></i></a>
                         </div>
                     </div>
                 </div>
@@ -43,9 +43,7 @@
                       <label for="exampleFormControlSelect1">الصورة \ الشعار</label>
 
 
-        <div dir="l" class="mb-4 input-group">
-            <span class="input-group-text"><i class="fa-solid fa-circle"></i></span>
-
+        <div dir="l" class="relative mb-4 form-group">
             <div id="img"></div>
             <x-input-error :messages="$errors->get('img')" class="mt-2" />
 
@@ -77,11 +75,13 @@
                     id:"img",
                     w:400,
                     h:200,
+                    mx_h:200,
+                    mx_w:400,
                     vh:200,
                     vw:400,
                     color:'#FFFFFF',
                    // withmask:true,
-                    with_w_h:true,
+                   // with_w_h:true,
                     //maskUrl:'{{ config("mysetting.logo") }}',
 
                     src:"{{ old('img') }}"
