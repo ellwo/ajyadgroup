@@ -63,20 +63,60 @@
             <h4>منذ عام 2003</h4>
             <h3>قصتنا</h3>
             <p>تأسست مجموعة أجياد في عام 2004م ودشنت نشاطها بتقديم خدمات الحج والعمرة ثم الأيدي العاملة وتخليص التأشيرات المتنوعة وتذاكر السفر..  مجموعة أجياد وفي ظل منافسة كبيرة وصعوبات شهدتها وتشهدها كل من سوق تخليص التأشيرات وخدمات الحج والعمرة في اليمن استطاعت في وقت قياسي أن تحقق حضوراً معتبراً داخل هذه السوق حتى صارت في الصدارة.</p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commo</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-            </ul>
-            <p>Vitae autem velit excepturi fugit. Animi ad non. Eligendi et non nesciunt suscipit repellendus porro in
-              quo eveniet. Molestias in maxime doloremque.</p>
 
-            <div class="watch-video d-flex align-items-center position-relative">
-              <i class="bi bi-play-circle"></i>
-              <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox stretched-link">Watch Video</a>
-            </div>
           </div>
         </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="stats-counter" class="stats-counter section-bg">
+    <div class="container">
+
+
+        <div class="py-0 m-0 mb-4 section-header">
+            <h2>نعتز بأرقامنا </h2>
+
+        </div>
+      <div class="flex justify-center text-center row gy-4">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="flex-shrink-0 bi bi-emoji-smile color-blue"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="23200" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>عميل سعيد</p>
+            </div>
+          </div>
+        </div><!-- End Stats Item -->
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="flex-shrink-0 bi bi-journal-richtext color-orange"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="52100" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>معاملة منجزة</p>
+            </div>
+          </div>
+        </div><!-- End Stats Item -->
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="flex-shrink-0 fa fa-hands-helping color-green"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>عام من الخبرة</p>
+            </div>
+          </div>
+        </div><!-- End Stats Item -->
+
+        <!-- End Stats Item -->
 
       </div>
 
