@@ -109,7 +109,7 @@ file_put_contents(public_path().'/'.$path,base64_decode($img));
 
 
                 // $pathh= Storage::disk('public')->put($path,base64_decode($img));
-                $urllll="http://".request()->getHttpHost().'/'.$path;
+                $urllll="https://".request()->getHttpHost().'/'.$path;
 
 
                 // $urllll =Storage::disk('public')->url($path);
