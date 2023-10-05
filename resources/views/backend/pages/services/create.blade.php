@@ -18,7 +18,7 @@
                         </div>
                         <div class="my-auto col-6 text-start">
 
-<button type="button" class="btn bg-gradient-info btn-sm">عودة الى القائمة <i class="fa fa-arrow-left"></i></button>
+<a href="{{ route('services') }}" class="btn bg-gradient-info btn-sm">عودة الى القائمة <i class="fa fa-arrow-left"></i></a>
                         </div>
                     </div>
                 </div>
@@ -31,17 +31,22 @@
                       <x-input-error :messages="$errors->get('titel')" class="mt-2" />
 
                     </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlSelect1">ايقونة الخدمة</label>
 
+                    <input type="hidden" name="img" id="img" value="">
 
-        <div dir="l" class="mb-4 input-group">
-            <span class="input-group-text"><i class="fa-solid fa-circle"></i></span>
-            <input type="text" required name="img" class="form-control" id="exampleFormControlInput1" value="{{ old('img','fa-solid fa-circle') }}"/>
-            <x-input-error :messages="$errors->get('img')" class="mt-2" />
-
-        </div>
-
+                    <div dir="l" class="mb-4 input-group">
+                            <div class="dropdown ">
+                                <a href="#" class="btn dropdown-toggle " data-bs-toggle="dropdown" id="navbarDropdownMenuLink2">
+                                    <i id="theicon" class="{{ old('img') }} "></i> ايقونة الخدمة
+                                </a>
+                                <ul id="selectison" style="height: 30vh !important; overflow-y: auto !important;" class="dropdown-menu h-24" aria-labelledby="navbarDropdownMenuLink2">
+                                    <li>
+                                        <div class="dropdown-item" >
+                                            <i class=""></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                              </div>
                     </div>
                     <div class="form-group">
                       <label for="exampleFormControlTextarea1">وصف الحدمة</label>
@@ -60,3 +65,9 @@
    </div>
 
    @endsection
+
+   @push('js')
+   <script src="{{ asset('assets/js/icons_select.js')}}"></script>
+
+
+   @endpush

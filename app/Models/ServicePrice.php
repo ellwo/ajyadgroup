@@ -10,7 +10,15 @@ class ServicePrice extends Model
     use HasFactory;
     protected $fillable=[
         'titel','img','note',
-        'price'
+        'price',
+        'active',
+        'service_id'
     ];
+
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
+    }
 
 }

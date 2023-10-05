@@ -4,7 +4,7 @@
 
 <div dir="rtl" {{ $attributes->merge(['class'=>"alert alert-info alert-dismissible fade show" ])}} role="alert">
     <span class="alert-icon mx-2"><i class="ni ni-like-2"></i></span>
-    <span class="alert-text text-white"><strong>
+    <span class="alert-text "><strong>
     {{ $title }}
     <br>
     </strong> {{ $status }}</span>

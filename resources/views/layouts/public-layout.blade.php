@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>مجموعة اجياد - الرئيسية</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
 
+    {!! JsonLd::generate() !!}
     <!-- Favicons --><link rel="icon" href="{{ asset('images/icon-logo.png') }}" sizes="192x192">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -20,13 +21,15 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    {{--
+    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet"> --}}
+
     <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <link href="{{ asset('assets/vendor/owl/css/owl.carousel.min.css') }}" rel="stylesheet">
@@ -76,6 +79,10 @@
 }
   </style>
 
+  @isset($styles)
+      {{ $styles }}
+  @endisset
+  @livewireStyles
 
 </head>
 
@@ -226,24 +233,70 @@
 
 
 
-    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }} "></script>
-    <script src="{{ asset('assets/vendor/aos/aos.js') }} "></script>
-    <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }} "></script>
-    <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }} "></script>
-    <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }} "></script>
-    <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }} "></script>
-    <script src="{{ asset('assets/vendor/owl/js/jquery.min.js') }} "></script>
+      <script src="{{ asset('assets/vendor/aos/aos.js') }} "></script>
+      <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }} "></script>
 
-    <script src="{{ asset('assets/vendor/owl/js/owl.carousel.min.js') }} "></script>
+      <script src="{{ asset('build/assets/app-149467b0.js') }}"></script>
+    {{--
+
+    <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }} "></script>
+    <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }} "></script> --}}
 
     <!-- Template Main JS File -->
+
+    @isset($script)
+
+    {{ $script }}
+    @endisset
     <script src="{{ asset('assets/js/main.js') }} "></script>
 
-        @isset($script)
+    <script>
+ var setup= () => {
 
-        {{ $script }}
-        @endisset
+    let lastScrollTop = 0;
+    const init = function() {
+        window.addEventListener("scroll", () => {
+            let st =
+                window.pageYOffset || document.documentElement.scrollTop;
+            if (st > lastScrollTop) {
+                // downscroll
+                this.scrollingDown = true;
+                this.scrollingUp = false;
+            } else {
+                // upscroll
+                this.scrollingDown = false;
+                this.scrollingUp = true;
+                if (st == 0) {
+                    //  reset
+                    this.scrollingDown = false;
+                    this.scrollingUp = false;
+                }
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        });
+    };
+    const getTheme = () => {
+        if (window.localStorage.getItem('dark')) {
+            return JSON.parse(window.localStorage.getItem('dark'))
+        }
 
+        return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+
+
+
+    return {
+        init,
+        isDark: getTheme(),
+        scrollingDown: false,
+        scrollingUp: false,
+    }
+};
+    </script>
+    @livewireScripts
+
+    
+    
 </body>
 
 </html>

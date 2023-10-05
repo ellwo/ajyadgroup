@@ -4,6 +4,47 @@
 
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.1/ui/trumbowyg.min.css">
+
+
+    <style>
+
+        li:marker {
+    color: var(--color-primary);
+}
+        .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+            border: none;
+        }
+        .ck p{
+            padding: 7px 7px 7px 7px;
+        }
+        .ck-content .table table th {
+            background-color: var(--color-primary);
+
+        }
+        .ck ul{
+            margin: 15px;
+        list-style: disc;
+        }
+        .ck ul li{
+            margin-top: 8px;
+
+        }
+
+        .ck ol{
+            margin: 15px;
+        list-style: decimal;
+        }
+        .ck ol li{
+            margin-top: 8px;
+
+        }
+        .ck h3{
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
 
     <div class="breadcrumbs d-flex align-items-center bg-m_secondary" >
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
@@ -23,14 +64,10 @@
 
           <div class=" row g-5">
 
-            <div class="col-lg-2"></div>
             <div class="col-lg-8">
 
               <article class="blog-details">
 
-                <div class="text-center post-img">
-                  <img src="{{ $post->img }}" alt="" class="mx-auto img-fluid">
-                </div>
 
                 <h2 class="title">{{ $post->titel }}</h2>
 
@@ -43,21 +80,27 @@
                     {{-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12
                         Comments</a></li> --}}
                   </ul>
-                </div><!-- End meta top -->
+                </div>
+                <br>
+                <br>
+                <div class="text-center post-img">
+                  <img src="{{ $post->img }}" alt="" class="mx-auto img-fluid">
+                </div>
+<!-- End meta top -->
 
-                <div class="content">
+                <div class="content" id="note">
                   @php
                       echo $post->content;
                   @endphp
                 </div><!-- End post content -->
 
                 <div class="meta-bottom">
-                  <i class="bi bi-folder"></i>
+                  <i class="fa fa-tags"></i>
                   <ul class="cats">
-                    <li><a href="#">مشاركة</a></li>
+                    <li><a class="cursor-pointer" onclick=" navigator.share({title:'{{ $post->titel}}',url:'{{ request()->url() }}'})">مشاركة
+                        <i class="fa fa-share"></i></a></li>
                   </ul>
 
-                  <i class="bi bi-tags"></i>
 
                 </div><!-- End meta bottom -->
 
@@ -225,101 +268,42 @@
 
             </div>
 
-            <div class="col-lg-2"></div>
+            <div class="col-lg-4  h-screen">
 
-            {{-- <div class="col-lg-4">
-
-              <div class="sidebar">
-
-                <div class="sidebar-item search-form">
-                  <h3 class="sidebar-title">Search</h3>
-                  <form action="" class="mt-3">
-                    <input type="text">
-                    <button type="submit"><i class="bi bi-search"></i></button>
-                  </form>
-                </div><!-- End sidebar search formn-->
-
-                <div class="sidebar-item categories">
-                  <h3 class="sidebar-title">Categories</h3>
-                  <ul class="mt-3">
-                    <li><a href="#">General <span>(25)</span></a></li>
-                    <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                    <li><a href="#">Travel <span>(5)</span></a></li>
-                    <li><a href="#">Design <span>(22)</span></a></li>
-                    <li><a href="#">Creative <span>(8)</span></a></li>
-                    <li><a href="#">Educaion <span>(14)</span></a></li>
-                  </ul>
-                </div><!-- End sidebar categories-->
+              <div class="sidebar  h-full">
+<!-- End sidebar categories-->
 
                 <div class="sidebar-item recent-posts">
-                  <h3 class="sidebar-title">Recent Posts</h3>
+                  <h3 class="sidebar-title">اخر الاخبار</h3>
 
                   <div class="mt-3">
 
+                    @foreach ($r_posts as $p)
+
                     <div class="mt-3 post-item">
-                      <img src="assets/img/blog/blog-recent-1.jpg" alt="">
-                      <div>
-                        <h4><a href="blog-details.html">Nihil blanditiis at in nihil autem</a></h4>
-                        <time datetime="2020-01-01">Jan 1, 2020</time>
-                      </div>
-                    </div><!-- End recent post item-->
+                        <img src="{{ $p->img }}" alt="">
+                        <div class="mx-2">
+                          <h4><a href="{{ route('post.show',$p) }}">{{ $p->titel }}</a></h4>
+                          <time datetime="2020-01-01">{{ $p->created_at }}</time>
+                        </div>
+                      </div><!-- End recent post item-->
 
-                    <div class="post-item">
-                      <img src="assets/img/blog/blog-recent-2.jpg" alt="">
-                      <div>
-                        <h4><a href="blog-details.html">Quidem autem et impedit</a></h4>
-                        <time datetime="2020-01-01">Jan 1, 2020</time>
-                      </div>
-                    </div><!-- End recent post item-->
+                    @endforeach
 
-                    <div class="post-item">
-                      <img src="assets/img/blog/blog-recent-3.jpg" alt="">
-                      <div>
-                        <h4><a href="blog-details.html">Id quia et et ut maxime similique occaecati ut</a></h4>
-                        <time datetime="2020-01-01">Jan 1, 2020</time>
-                      </div>
-                    </div><!-- End recent post item-->
-
-                    <div class="post-item">
-                      <img src="assets/img/blog/blog-recent-4.jpg" alt="">
-                      <div>
-                        <h4><a href="blog-details.html">Laborum corporis quo dara net para</a></h4>
-                        <time datetime="2020-01-01">Jan 1, 2020</time>
-                      </div>
-                    </div><!-- End recent post item-->
-
-                    <div class="post-item">
-                      <img src="assets/img/blog/blog-recent-5.jpg" alt="">
-                      <div>
-                        <h4><a href="blog-details.html">Et dolores corrupti quae illo quod dolor</a></h4>
-                        <time datetime="2020-01-01">Jan 1, 2020</time>
-                      </div>
-                    </div><!-- End recent post item-->
-
+                    @if (count($r_posts)==0)
+                        <div class="flex w-full justify-center">
+                            <h2 class="mx-auto">
+                                لايوجد منشورات حاليا
+                            </h2>
+                        </div>
+                    @endif
                   </div>
 
                 </div><!-- End sidebar recent posts-->
 
-                <div class="sidebar-item tags">
-                  <h3 class="sidebar-title">Tags</h3>
-                  <ul class="mt-3">
-                    <li><a href="#">App</a></li>
-                    <li><a href="#">IT</a></li>
-                    <li><a href="#">Business</a></li>
-                    <li><a href="#">Mac</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Office</a></li>
-                    <li><a href="#">Creative</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Smart</a></li>
-                    <li><a href="#">Tips</a></li>
-                    <li><a href="#">Marketing</a></li>
-                  </ul>
-                </div><!-- End sidebar tags-->
-
               </div><!-- End Blog Sidebar -->
 
-            </div> --}}
+            </div>
 
 
           </div>
@@ -327,6 +311,40 @@
         </div>
       </section><!-- End Blog Details Section -->
 
+      <x-slot name="script">
+        <script src="{{ asset('assets/js/ckeditor.js') }}"></script>
+        <script>
+
+            ClassicEditor
+                .create( document.querySelector( '#note' ), {
+                    language: {
+                        // The UI will be English.
+                        ui: 'ar',
+
+                        // But the content will be edited in Arabic.
+                        content: 'ar'
+                    }  ,
+                     removePlugins: [],
+                     ckfinder: {
+                                uploadUrl: "{{route('image.upload').'?_token='.csrf_token()}}",
+                    }
+
+                } )
+                .then( editor => {
+                    window.editor = editor;
+                    const toolbarElement = editor.ui.view.toolbar.element;
+                        toolbarElement.style.display = 'none';
+                        console.log(toolbarElement);
+                        editor.enableReadOnlyMode( '#note');
+
+                } )
+                .catch( err => {
+                    console.error( err.stack );
+                } );
+            </script>
+
+
+      </x-slot>
 
 
 </x-public-layout>

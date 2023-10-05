@@ -1349,11 +1349,11 @@ function ajxaproform(e, th, urll) {
             console.log(data);
             if (data.statt == 'ok') {
 
-                window.location.reload();
+                // window.location.reload();
 
             } else if (data.statt == "error") {
 
-                $(".addpro").prepend("<div class='m-4 rounded-lg text-white bg-red-700 '> " + data.message + "</div>");
+                $(th).prepend("<div class='m-4 rounded-lg text-white bg-red-700 '> " + data.message + "</div>");
                 console.log(data);
             }
         },
@@ -1581,10 +1581,10 @@ class ImagetoServer {
             $("#imgsrc" + this.id).attr("src", this.src);
 
 
-            if (this.mx_h != -1)
-                $("#imgsrc" + this.id).attr("height", this.mx_h);
-            else
-                $("#imgsrc" + this.id).attr("height", this.hv);
+            // if (this.mx_h != -1)
+            //     $("#imgsrc" + this.id).attr("height", this.mx_h);
+            // else
+            //     $("#imgsrc" + this.id).attr("height", this.hv);
 
             $("#" + this.id).attr("value", this.src);
             //  document.getElementById(this.id).value=this.id;

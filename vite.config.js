@@ -7,7 +7,8 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/scss/argon-dashboard.scss'
+                'resources/scss/argon-dashboard.scss',
+                'resources/js/custom.js'
             ],
             refresh: true,
         }),

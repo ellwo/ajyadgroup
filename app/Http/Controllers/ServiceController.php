@@ -3,7 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\ServicePrice;
 use Illuminate\Http\Request;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\TwitterCard;
+use Illuminate\Support\Facades\Config;
+use Artesaos\SEOTools\Facades\JsonLd;
+
+use Artesaos\SEOTools\Facades\SEOTools;
+
 
 class ServiceController extends Controller
 {
@@ -41,8 +50,55 @@ class ServiceController extends Controller
     public function show(Service $service)
     {
 
-      //  return dd($service->service_parts);
-        return view('pages.services.show',['service'=>$service]);
+     
+
+    //     SEOMeta::setTitle($service->titel);
+    //     SEOMeta::setDescription($service->note);
+    //    // SEOMeta::addMeta('article:published_time', $post->published_date->toW3CString(), 'property');
+    //  //   SEOMeta::addMeta('article:section', $post->category, 'property');
+    //   //  SEOMeta::addKeyword(['key1', 'key2', 'key3']);
+    //   SEOMeta::setCanonical(request()->getUri());
+    //    OpenGraph::setDescription();
+    //    OpenGraph::setTitle($service->titel);
+    //    OpenGraph::setUrl(request()->getUri());
+    //    OpenGraph::addProperty('type', 'articles');
+   
+   
+    //    OpenGraph::addProperty('locale', 'ar');
+    //    OpenGraph::addProperty('locale:alternate', ['ar', 'en-us']);
+    //    //   OpenGraph::addProperty('image', Config::get('sitesetting.hero_icon'));
+    //    OpenGraph::addImage(Config::get('sitesetting.hero_icon'));
+    //    OpenGraph::addImage(Config::get('sitesetting.hero_icon'), ['height' => 300, 'width' => 300]);
+    //    OpenGraph::addImage(Config::get('sitesetting.app_logo'), ['height' => 300, 'width' => 300]);
+
+
+
+    //    JsonLd::setTitle(Config::get('sitesetting.app_name'));
+    //    JsonLd::setDescription(Config::get('sitesetting.about_us'));
+    //    JsonLd::setType('Article');
+    //    JsonLd::addImage(Config::get('sitesetting.hero_icon'));
+    $service_part=$_GET['service_part']??$service->service_parts[0]?->id;
+    
+
+    $p=ServicePrice::find($service_part);
+       SEOTools::setTitle($service->titel);
+       SEOTools::setDescription($service->note);
+       
+       SEOTools::opengraph()->setUrl(request()->getUri());
+       SEOTools::opengraph()->setDescription($service->note.$p->note);
+       SEOTools::setCanonical(request()->getUri());
+       SEOTools::opengraph()->addProperty('type', 'articles');
+     
+       SEOTools::twitter()->setSite($service->titel);
+
+       SEOTools::jsonLd()->setDescription($service->note);
+       SEOTools::jsonLd()->setTitle(Config::get('sitesetting.app_name'));
+    //   
+     
+        //  return dd($service->service_parts);
+      $service_part=$_GET['service_part']??$service->service_parts[0]?->id;
+        return view('pages.services.show',['service'=>$service,
+    'service_part'=>$service_part]);
         //
     }
 

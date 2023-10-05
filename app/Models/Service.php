@@ -16,7 +16,13 @@ class Service extends Model
 
    public function service_parts(){
 
-        return $this->hasMany(ServicePart::class);
+        return $this->hasMany(ServicePrice::class);
+
+    }
+
+    function service_prices() {
+
+        return $this->hasMany(ServicePrice::class);
 
     }
 

@@ -10,8 +10,8 @@ class="top-0 transition-transform duration-500 header align-items-center"
 >
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <i class="mobile-nav-toggle mobile-nav-show fa fa-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none fa fa-x"></i>
         <nav dir="rtl" id="navbar" class="navbar ">
 
             <ul>
@@ -21,14 +21,14 @@ class="top-0 transition-transform duration-500 header align-items-center"
                     @else
                     @endif
                     ">الرئيسية</a></li>
-                    <li><a class="{{ request()->routeIs('about-us')?'active':'' }}" href="{{(request()->routeIs('home')||request()->routeIs('about-us'))?'#alt-services':route('about-us')}}">من نحن</a></li>
+
                     <li><a href="{{(request()->routeIs('home')||request()->routeIs('pass.search.get'))?'#get-started':route('pass.search.get',['key'=>'الاستعلام-عن-حالة-جواز'])}}"
                         class="{{ request()->routeIs('pass.search.get')?'active':'' }}"
                         >الاستعلام عن جواز</a></li>
 
                 <li><a href="{{request()->routeIs('home')?'#services': route('service')}}"
 
-                    class="@if (request()->routeIs('service'))
+                    class="@if (request()->routeIs('service')||request()->routeIs('service.*'))
                     active
                     @else
                     @endif">الخدمات</a></li>
@@ -37,11 +37,16 @@ class="top-0 transition-transform duration-500 header align-items-center"
                     @else
                     @endif" href="{{ route('address') }}">فروعنا</a></li>
 
-                <li><a class="@if (request()->routeIs('post'))
+                <li><a class="@if (request()->routeIs('post.*')||request()->routeIs('post'))
                     active
                     @else
                     @endif" href="{{ route('post') }}">اخر الاخبار</a></li>
 
+
+                    <li><a class="@if (request()->routeIs('service_price')||request()->routeIs('service_price.*'))
+                        active
+                        @else
+                        @endif" href="{{ route('service_price') }}">قائمة الاسعار</a></li>
 
                 {{-- <li class="dropdown"><a href="#"><span>مواقع التواصل الاجتماعي</span> <i
             class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -62,6 +67,10 @@ class="top-0 transition-transform duration-500 header align-items-center"
                         <li><a href="#">Dropdown 4</a></li>
                     </ul>
                 </li> --}}
+                <li><a class="{{ request()->routeIs('about-us')?'active':'' }}"
+                     href="{{(request()->routeIs('home')||request()->routeIs('about-us'))?'#alt-services':route('about-us')}}">من نحن</a>
+                </li>
+
                 <li><a class="  @if (request()->routeIs('contact'))
                     active
                     @else

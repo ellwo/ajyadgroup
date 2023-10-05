@@ -35,16 +35,14 @@
 
                     <div class="form-group">
                         <label for="content">تفاصيل الخبر</label>
-                        <textarea name="content" class="form-control" id="content" rows="3"></textarea>
+                        <textarea name="content" class="form-control" id="content" rows="6"></textarea>
                       </div>
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">الصورة </label>
 
 
-        <div dir="l" class="mb-4 input-group">
-            <span class="input-group-text"><i class="fa-solid fa-circle"></i></span>
-
-            <div id="img"></div>
+        <div dir="l" class="mb-4 h-25">
+            <div class="flex" id="img"></div>
             <x-input-error :messages="$errors->get('img')" class="mt-2" />
 
         </div>
@@ -65,9 +63,8 @@
    @endsection
 
    @push('js')
-   <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
-   <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/translations/ar.js"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.1/ui/trumbowyg.min.css">
+   <script src="{{ asset('assets/js/ar.js') }}"></script>
+   <script src="{{ asset('assets/js/ckeditor.js') }}"></script>
 
 
 <script>

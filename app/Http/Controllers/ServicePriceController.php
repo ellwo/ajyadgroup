@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ServicePart;
 use App\Models\ServicePrice;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,10 @@ class ServicePriceController extends Controller
     public function index()
     {
         //
+        $service_prices=ServicePrice::all();
+        return view('pages.service-prices.index',[
+            'service_prices'=>$service_prices
+        ]);
     }
 
     /**
@@ -20,6 +25,7 @@ class ServicePriceController extends Controller
      */
     public function create()
     {
+
         //
     }
 
@@ -28,15 +34,17 @@ class ServicePriceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //]
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(ServicePrice $servicePrice)
+    public function show(ServicePart $servicePrice)
     {
         //
+        return redirect()->route('service.show',['service'=>$servicePrice]);
+        return view('pages.service-prices.show',['post'=>$servicePrice]);
     }
 
     /**

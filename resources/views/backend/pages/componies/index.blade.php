@@ -19,19 +19,7 @@
                             </p>
                         </div>
                         <div class="my-auto col-6 text-start">
-                            <div class="dropdown float-start ps-4">
-                                <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="fa fa-ellipsis-v text-secondary"></i>
-                                </a>
-                                <ul class="px-2 py-3 dropdown-menu me-n4" aria-labelledby="dropdownTable">
-                                    <li><a class="dropdown-item border-radius-md" href="javascript:;">عمل</a></li>
-                                    <li><a class="dropdown-item border-radius-md" href="javascript:;">عمل آخر</a>
-                                    </li>
-                                    <li><a class="dropdown-item border-radius-md" href="javascript:;">شيء آخر
-                                            هنا</a></li>
-                                </ul>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -79,8 +67,7 @@
                                                 </a>
                                                 <ul class="px-2 py-3 dropdown-menu me-n4" aria-labelledby="dropdownTable">
                                                     <li><a class="dropdown-item border-radius-md " href="{{ route('companies.edit',$se->id) }}">تعديل <i class="fa fa-edit"></i></a></li>
-                                                    <li><a class="dropdown-item border-radius-md" href="{{ route('companies.show',$se->id) }}">عرض <i class="fa fa-eye"></i></a>
-                                                    </li>
+
 
                                                     <li>
                                                         <form action="{{ route('companies.destroy',$se) }}"

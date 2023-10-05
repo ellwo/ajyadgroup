@@ -12,6 +12,7 @@ class SiteInfoController extends Controller
      */
     public function index()
     {
+        return view('backend.pages.setting.setting');
         //
     }
 
@@ -28,6 +29,19 @@ class SiteInfoController extends Controller
      */
     public function store(Request $request)
     {
+        foreach($_POST as $k=>$v){
+            SiteInfo::updateOrCreate(
+            [
+                'key'=>$k
+            ],[
+             'value'=>$k=="phone"?implode(',',$v):$v
+            ]);
+
+            
+        }
+
+        return back()->with('status','تم التعديل بنجاح');
+        return dd(SiteInfo::all());
         //
     }
 

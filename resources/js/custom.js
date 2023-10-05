@@ -4,11 +4,15 @@ import PerfectScrollbar from 'perfect-scrollbar';
 (function() {
     var isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
-    if (isWindows) {
+    if (isWindows || !isWindows) {
         // if we are on windows OS we activate the perfectScrollbar function
         if (document.getElementsByClassName('main-content')[0]) {
             var mainpanel = document.querySelector('.main-content');
             var ps = new PerfectScrollbar(mainpanel);
+        };
+        if (document.getElementsByClassName('table-responsive')[0]) {
+            var restable = document.querySelector('.table-responsive');
+            var pstable = new PerfectScrollbar(restable);
         };
 
         if (document.getElementsByClassName('sidenav')[0]) {

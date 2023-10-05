@@ -6,12 +6,14 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5|^8.1",
+        "artesaos/seotools": "^1.2",
         "davmixcool/laravel-meta-manager": "^1.2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "livewire/livewire": "^3.0"
+        "livewire/livewire": "^3.0",
+        "spatie/laravel-sitemap": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

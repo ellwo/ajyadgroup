@@ -133,7 +133,7 @@
     </div>
 </aside> --}}
 <aside
-class="my-3 bg-white border-0 sidenav navbar navbar-vertical navbar-expand-xs border-radius-xl fixed-end me-4 rotate-caret"
+class="my-3  border-0  bg-light sidenav navbar navbar-vertical navbar-expand-xs border-radius-xl fixed-end me-4 rotate-caret"
 id="sidenav-main">
 <div class="sidenav-header">
     <i class="top-0 p-3 cursor-pointer fas fa-times text-secondary opacity-5 position-absolute start-0 d-none d-xl-none"
@@ -156,8 +156,9 @@ id="sidenav-main">
             " href="{{ route('dashboard') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
-                    <i class="text-sm ni ni-tv-2 text-primary opacity-10"></i>
+                    <i class="text-sm fa-solid fa-gauge text-primary opacity-10"></i>
                 </div>
+
                 <span class="nav-link-text me-1">لوحة القيادة</span>
             </a>
         </li>
@@ -167,9 +168,51 @@ id="sidenav-main">
             @endif" href="{{ route('services') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
-                    <i class="text-sm ni ni-calendar-grid-58 text-warning opacity-10"></i>
+                    <i class="text-sm fa-solid fa-grip-vertical text-warning opacity-10"></i>
                 </div>
                 <span class="nav-link-text me-1">الخدمات</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @if(request()->routeIs('service_prices')||request()->routeIs('service_prices.*'))
+                active
+            @endif" href="{{ route('service_prices') }}">
+                <div
+                    class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
+                    <i class="text-sm fa-solid fa-grip-vertical text-warning opacity-10"></i>
+                </div>
+                <span class="nav-link-text me-1"> الخدمات الفرعية</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link
+
+            @if (request()->routeIs('passportinfos')||request()->routeIs('passportinfos.*'))
+            active
+            @endif
+            " href="{{ route('passportinfos') }}">
+                <div
+                    class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
+                    <i class="text-sm fa-solid fa-passport text-info opacity-10"></i>
+                </div>
+                <span class="nav-link-text me-1">ادارة سجلات الجوازات</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link
+
+            @if (request()->routeIs('contacts')||request()->routeIs('contacts.*'))
+            active
+            @endif
+            " href="{{ route('contacts') }}">
+                <div
+                    class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
+                    <i class="text-sm fa-solid fa-message text-info opacity-10"></i>
+                </div>
+                <span class="nav-link-text me-1">الرسائل /الشكاوى والاستفسارات</span>
             </a>
         </li>
         <li class="nav-item">
@@ -180,7 +223,7 @@ id="sidenav-main">
             " href="{{ route('companies') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
-                    <i class="text-sm ni ni-credit-card text-success opacity-10"></i>
+                    <i class="text-sm fa-solid fa-handshake text-success opacity-10"></i>
                 </div>
                 <span class="nav-link-text me-1">شركاؤنا</span>
             </a>
@@ -188,14 +231,14 @@ id="sidenav-main">
         <li class="nav-item">
             <a class="nav-link
 
-            @if (request()->routeIs('addresses'))
+            @if (request()->routeIs('addresses')||request()->routeIs('addresses.*'))
 
             active
             @endif
             " href="{{ route('addresses') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
-                    <i class="text-sm ni ni-app text-info opacity-10"></i>
+                    <i class="text-sm fa-solid fa-location-crosshairs text-info opacity-10"></i>
                 </div>
                 <span class="nav-link-text me-1">ادارة الفروع</span>
             </a>
@@ -209,7 +252,7 @@ id="sidenav-main">
             " href="{{ route('posts') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
-                    <i class="text-sm ni ni-world-2 text-danger opacity-10"></i>
+                    <i class="text-sm fa-solid fa-newspaper text-danger opacity-10"></i>
                 </div>
                 <span class="nav-link-text me-1">الاخبار</span>
             </a>

@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Config;
+
+use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\Facades\JsonLd;
+
 class PostController extends Controller
 {
     /**
@@ -40,8 +45,27 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $r_posts=Post::where('id','!=',$post->id)->orderBy('id','desc')->take(3)->get();
         //
-        return view('pages.posts.show',['post'=>$post]);
+     
+        SEOTools::setTitle($post->titel);
+        SEOTools::setDescription($post->content);
+        
+        SEOTools::opengraph()->setUrl(request()->getUri());
+        SEOTools::opengraph()->setDescription($post->content);
+        SEOTools::setCanonical(request()->getUri());
+        SEOTools::opengraph()->addProperty('type', 'articles');
+      
+        SEOTools::twitter()->setSite(request()->getUri());
+        SEOTools::twitter()->addImage(Config::get('sitesetting.app_logo'), ['height' => 300, 'width' => 300]);
+        SEOTools::twitter()->addImage($post->img, ['height' => 600, 'width' => 600]);
+       
+        SEOTools::jsonLd()->setDescription($post->content);
+        SEOTools::jsonLd()->setTitle(Config::get('sitesetting.app_name'));
+        SEOTools::jsonLd()->addImage($post->img);
+        SEOTools::opengraph()->addImage($post->img);
+       
+        return view('pages.posts.show',['post'=>$post,'r_posts'=>$r_posts]);
     }
 
     /**

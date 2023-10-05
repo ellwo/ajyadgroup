@@ -1,5 +1,4 @@
 import './bootstrap';
-import './custom';
 
 import Alpine from 'alpinejs';
 
@@ -52,6 +51,6 @@ document.addEventListener("alpine:init", () => {
         }
     })
 });
-window.Alpine = Alpine;
+// window.Alpine = Alpine;
 
 Alpine.start();

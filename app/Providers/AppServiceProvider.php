@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use App\Models\City;
+use App\Models\SiteInfo;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Config;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,5 +31,14 @@ class AppServiceProvider extends ServiceProvider
         });
 
         view()->share('cities',$cities);
+        $settings=SiteInfo::all();
+        foreach($settings as $setting){
+
+            if( Config::has('sitesetting.'.$setting['key']))
+            {
+               Config::set("sitesetting.".$setting["key"],$setting["value"]);
+            }
+    //    config("mysetting.".$setting['key'])->set($setting["value"]);
+    }            
     }
 }

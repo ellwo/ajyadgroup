@@ -6,7 +6,12 @@ use App\Http\Controllers\PassportInfoController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ServicePriceController;
+use App\Models\Service;
+use App\Models\ServicePrice;
 use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +45,24 @@ Route::resource('service',ServiceController::class)->name('index','service');
 Route::get('/address',[AddressController::class,'index'])->name('address');
 Route::get('/address/{id}',[AddressController::class,'show'])->name('address.show');
 Route::resource('/post',PostController::class)->name('index','post');
+Route::resource('/service_price',ServicePriceController::class)->name('index','service_price');
+
+Route::get('/site-map',function ()
+{
+$sitemap= Sitemap::create()
+->add(Url::create('/home') )
+->add(Url::create('/about-us') )
+->add(Url::create('/address') );
+
+$services=Service::all()->each(function($ser)use($sitemap){
+    $sitemap->add(Url::create("/service/{$ser->id}"));
+  });
+  $services=ServicePrice::all()->each(function($ser)use($sitemap){
+    $sitemap->add(Url::create("/service/{$ser->service->id}?service_part={$ser->id}"));
+  });
+    $sitemap->writeToFile(public_path('sitemap.xml'));
+    # code...
+});
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

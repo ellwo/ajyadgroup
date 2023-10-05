@@ -85,6 +85,7 @@
     <x-slot name="script">
 
 
+        <script src="{{ asset('assets/vendor/owl/js/jquery.min.js') }} "></script>
         <script src="{{ asset('assets/js/search_pass.js') }}"></script>
 
     </x-slot>

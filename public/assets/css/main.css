@@ -531,6 +531,9 @@ section {
         transition: 0.3s;
         z-index: 9998;
     }
+    .navbar a {
+        background-color: var(--color-secondary);
+    }
     .navbar a,
     .navbar a:focus {
         display: flex;
@@ -556,6 +559,7 @@ section {
     .navbar .active:focus,
     .navbar li:hover>a {
         color: #fff;
+        color: var(--color-primary) !important;
     }
     .navbar .dropdown ul,
     .navbar .dropdown .dropdown ul {
@@ -1355,7 +1359,6 @@ section {
 }
 
 .about .about-img {
-    min-height: 600px;
     background-size: cover;
     background-position: center;
 }
@@ -1989,6 +1992,10 @@ section {
         font-size: 19px;
         font-weight: 700;
     }
+    section {
+        padding: 80px 0;
+        overflow: hidden;
+    }
     .service-details ul {
         list-style: none;
         padding: 0;
@@ -2006,6 +2013,15 @@ section {
     .hero .info {
         top: 50%;
         padding: 0 50px;
+    }
+    .section-header h3 {
+        font-size: 18px;
+    }
+    .section-header h2 {
+        font-size: 18px !important;
+    }
+    .blog .blog-details .title {
+        font-size: 20px !important;
     }
     .hero .info p {
         font-size: 12px !important;
@@ -2029,6 +2045,36 @@ section {
     .hero .info {
         top: 50%;
         padding: 0 50px;
+    }
+    .section-header h2 {
+        font-size: 18px !important;
+    }
+    .section-header p {
+        font-size: 14px !important;
+    }
+    .section-header h2:before {
+        margin: 0px 5px 3px 5px !important;
+    }
+    .section-header h2:after {
+        margin: 0px 5px 3px 5px !important;
+    }
+    .section-header h3 {
+        font-size: 18px;
+    }
+    .blog .blog-details .title {
+        font-size: 18px !important;
+    }
+    .ck h3 {
+        font-size: 18px !important;
+    }
+    .ck ul li {
+        font-size: 12px !important;
+    }
+    .ck ol li {
+        font-size: 12px !important;
+    }
+    .blog .blog-details {
+        padding: 5px !important;
     }
     .hero .info p {
         font-size: 12px !important;
@@ -2063,6 +2109,9 @@ section {
 @media (max-width: 768px) {
     .hero .info h2 {
         font-size: 36px;
+    }
+    .section-header h3 {
+        font-size: 20px;
     }
 }
 

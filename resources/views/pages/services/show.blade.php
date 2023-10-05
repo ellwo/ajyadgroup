@@ -6,9 +6,9 @@
 
 
     <div class="breadcrumbs d-flex align-items-center bg-m_secondary" >
-        <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+        <div class="container position-relative d-flex flex-column align-items-right mt-4" data-aos="fade">
 
-            <h2>خدمات تخليص التأشيرات</h2>
+            <h2>{{ $service->titel }}</h2>
             <ol>
                 <li><a href="{{ route('home') }}">الرئيسية</a></li>
                 <li><a href="{{ route('service') }}">الخدمات</a></li>
@@ -24,52 +24,60 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
 
-            <div class="flex flex-col items-center justify-center mx-auto mb-4 md:w-1/2 md:text-lg">
-                <div class="mx-auto mb-2 text-3xl font-bold">{{ $service->titel }} <i class="{{ $service->img }}"></i></div>
-                <p class="p-2 border-r-4 border-r-black ">{{ $service->note }}</p>
+            <div class="flex sticky flex-col items-center justify-center mx-auto mb-4 md:w-1/2 md:text-lg">
+                <div class="mx-auto mb-2 text-3xl pr-2 font-bold border-r-4 border-r-black">{{ $service->titel }} <i class="{{ $service->img }}"></i></div>
+                <p class="p-2  ">{{ $service->note }}</p>
             </div>
-            <div class="row gy-4">
+            <div class="row gy-4 relative min-h-screen">
 
-                <div class=" nav nav-tabs col-lg-4">
-                    <div class="w-full services-list">
+                <div class=" nav nav-tabs col-lg-4 sticky">
+                    
+                    
+                    <div class="w-full flex services-list">
 
-                        @php
-                            $it=0;
-                        @endphp
-                       @foreach ($service->service_parts as $ser)
+                        <div class="w-1/2 navbar ">
+                            <a href="">
+                                $sdd
+                            </a>
+                        </div>
+                        <div style="border:none;" class="w-1/2 services-list border-none">
 
-                       <a class="cursor-pointer @php
-                           if($it==0)
-                           echo 'active show';
-                           $it++;
-                       @endphp" data-bs-toggle="tab" data-aos="fade-up" data-bs-target="#tab-{{ $ser->id }}">
-                        {{ $ser->titel }}</a>
-                       @endforeach
+                            @php
+                                $it=$service_part;
+                            @endphp
+                           @foreach ($service->service_parts as $ser)
+    
+                           <a class="cursor-pointer @php
+                               if($service_part==$ser->id)
+                               echo 'active show';
+                            
+                           @endphp" data-bs-toggle="tab" data-aos="fade-up" data-bs-target="#tab-{{ $ser->id }}">
+                            {{ $ser->titel }}</a>
+                           @endforeach
+                        </div>
+    
                     </div>
-
+                    
                 </div>
 
                 <div class="col-lg-8">
 
 
                     @php
-                        $it=0;
+                        $it=$service_part;
                     @endphp
 
                 <div class="tab-content">
 
                     @foreach ($service->service_parts as $ser)
                     <div class="tab-pane @php
-                    if($it==0)
+                    if($service_part==$ser->id)
                     echo 'active show';
-                    $it++;
+                    
                 @endphp" id="tab-{{ $ser->id }}" data-aos="fade-up">
-           <div class="flex flex-col pb-0 mt-2 mb-2 text-right section-header">
-                    <h3>
-                 {{ $ser->titel }}
-                    </h3>
-                  </div>
-                  <p class="md:w-2/3">{{ $ser->note }}</p>
+
+                  <x-frontend.service-desc :post="$ser"/>
+
 <br><hr>
 
                         @foreach ($ser->steps??[] as $s)

@@ -2,98 +2,60 @@
 
 @section('content')
     <!-- End Navbar -->
-    <div class="py-4 container-fluid">
-        <div class="row">
+    <div class="py-4 container-fluid ">
+        <div class="row" dir="rtl">
+
+            @foreach ($counters as $counter)
+
             <div class="mb-4 col-lg-3 col-sm-6 mb-lg-0">
                 <div class="card">
                     <div class="p-3 card-body">
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="mb-0 text-sm text-capitalize font-weight-bold">أموال اليوم</p>
+                                    <p class="mb-0 text-sm text-capitalize font-weight-bold">{{ $counter->titel }}</p>
                                     <h5 class="mb-0 font-weight-bolder">
-                                        $53,000
-                                        <span class="text-sm text-success font-weight-bolder">+55%</span>
+                                        {{ $counter->value }}
+                                        <a href="{{ route('counters.edit',$counter) }}"
+                                         class="mx-3 text-sm text-success font-weight-bolder">تعديل</a>
+
                                     </h5>
                                 </div>
                             </div>
                             <div class="col-4 text-start">
                                 <div class="text-center shadow icon icon-shape bg-gradient-primary border-radius-md">
-                                    <i class="text-lg ni ni-money-coins opacity-10" aria-hidden="true"></i>
+                                    <i class="text-lg {{ $counter->img }} opacity-10" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
+
             <div class="mb-4 col-lg-3 col-sm-6 mb-lg-0">
-                <div class="card">
-                    <div class="p-3 card-body">
+                <div class="">
+                    <div class="p-3 ">
                         <div class="row">
-                            <div class="col-8">
-                                <div class="numbers">
-                                    <p class="mb-0 text-sm text-capitalize font-weight-bold">مستخدمو اليوم</p>
-                                    <h5 class="mb-0 font-weight-bolder">
-                                        2,300
-                                        <span class="text-sm text-success font-weight-bolder">+33%</span>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="col-4 text-start">
-                                <div class="text-center shadow icon icon-shape bg-gradient-primary border-radius-md">
-                                    <i class="text-lg ni ni-world opacity-10" aria-hidden="true"></i>
-                                </div>
+                            <div class="col-12">
+                                <a class="p-2 mt-auto mb-0 bg-white rounded text-info btn font-weight-bold ps-1 icon-move-left"
+                                href="{{ route('counters') }}">ادارة الارقام / العدادات
+                                <i class="text-sm fas fa-arrow-left ms-1" aria-hidden="true"></i>
+                            </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mb-4 col-lg-3 col-sm-6 mb-lg-0">
-                <div class="card">
-                    <div class="p-3 card-body">
-                        <div class="row">
-                            <div class="col-8">
-                                <div class="numbers">
-                                    <p class="mb-0 text-sm text-capitalize font-weight-bold">عملاء جدد</p>
-                                    <h5 class="mb-0 font-weight-bolder">
-                                        +3,462
-                                        <span class="text-sm text-danger font-weight-bolder">-2%</span>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="col-4 text-start">
-                                <div class="text-center shadow icon icon-shape bg-gradient-primary border-radius-md">
-                                    <i class="text-lg ni ni-paper-diploma opacity-10" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card">
-                    <div class="p-3 card-body">
-                        <div class="row">
-                            <div class="col-8">
-                                <div class="numbers">
-                                    <p class="mb-0 text-sm text-capitalize font-weight-bold">مبيعات</p>
-                                    <h5 class="mb-0 font-weight-bolder">
-                                        $103,430
-                                        <span class="text-sm text-success font-weight-bolder">+5%</span>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="col-4 text-start">
-                                <div class="text-center shadow icon icon-shape bg-gradient-primary border-radius-md">
-                                    <i class="text-lg ni ni-cart opacity-10" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
-        <div class="mt-4 row">
+
+
+
+
+
+        <div class="mt-4 row" dir="rtl">
+{{--
             <div class="mb-4 col-lg-7 mb-lg-0">
                 <div class="card">
                     <div class="p-3 card-body">
@@ -124,23 +86,75 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-5">
+            </div> --}}
+
+            <div class="mx-auto col-lg-7">
                 <div class="p-3 card h-100">
                     <div class="overflow-hidden bg-cover position-relative border-radius-lg h-100"
-                        style="background-image: url('/img/ivancik.jpg');">
+                        style="background-image: url('{{ $post->img }}'); background-position: center; background-size: cover;">
                         <span class="mask bg-gradient-dark"></span>
                         <div class="p-3 card-body position-relative z-index-1 h-100">
                             <div class="d-flex flex-column h-100">
-                                <h5 class="pt-2 mb-4 text-white font-weight-bolder">العمل مع الصواريخ</h5>
-                                <p class="mb-5 text-white">تكوين الثروة هو لعبة تطوري حديثة ذات حصيلة إيجابية. الأمر
-                                    كله يتعلق بمن يغتنم الفرصة أولاً هذه بطاقة بسيطة.</p>
-                                <a class="mt-auto mb-0 text-white font-weight-bold ps-1 icon-move-left"
-                                    href="javascript:;">اقرأ المستندات
+                                <h5 class="pt-2 mb-4 text-white font-weight-bolder">{{ $post->titel }}</h5>
+                                <p class="mb-5 text-white">..</p>
+                                <a class="mt-auto mb-4 text-white font-weight-bold ps-1 icon-move-left"
+                                    href="{{ route('posts') }}">ادارة الاخبار
                                     <i class="text-sm fas fa-arrow-left ms-1" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12">
+                <div class="p-0 overflow-hidden card card-carousel h-100">
+                    <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
+                        <div class="carousel-inner border-radius-lg h-100">
+                            <div class="carousel-item h-100 active"
+                                style="background-image: url('./img/carousel-1.jpg');
+            background-size: cover;">
+                                <div class="bottom-0 carousel-caption d-none d-md-block text-start start-0 ms-5">
+                                    <div class="mb-3 text-center bg-white icon icon-shape icon-sm border-radius-md">
+                                        <i class="ni ni-camera-compact text-dark opacity-10"></i>
+                                    </div>
+                                    <h5 class="mb-1 text-white">Get started with Argon</h5>
+                                    <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100"
+                                style="background-image: url('./img/carousel-2.jpg');
+            background-size: cover;">
+                                <div class="bottom-0 carousel-caption d-none d-md-block text-start start-0 ms-5">
+                                    <div class="mb-3 text-center bg-white icon icon-shape icon-sm border-radius-md">
+                                        <i class="ni ni-bulb-61 text-dark opacity-10"></i>
+                                    </div>
+                                    <h5 class="mb-1 text-white">Faster way to create web pages</h5>
+                                    <p>That’s my skill. I’m not really specifically talented at anything except for the
+                                        ability to learn.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100"
+                                style="background-image: url('./img/carousel-3.jpg');
+            background-size: cover;">
+                                <div class="bottom-0 carousel-caption d-none d-md-block text-start start-0 ms-5">
+                                    <div class="mb-3 text-center bg-white icon icon-shape icon-sm border-radius-md">
+                                        <i class="ni ni-trophy text-dark opacity-10"></i>
+                                    </div>
+                                    <h5 class="mb-1 text-white">Share with us your design tips!</h5>
+                                    <p>Don’t be afraid to be wrong because you can’t learn anything from a compliment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="w-5 carousel-control-prev me-3" type="button"
+                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="w-5 carousel-control-next me-3" type="button"
+                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -742,30 +756,10 @@
                                 document.write(new Date().getFullYear())
                             </script>,
                             made with <i class="fa fa-heart"></i> by
-                            <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative
-                                Tim</a>
+                            <a href="#" class="font-weight-bold" target="_blank">
+                            Mr.Zoom</a>
                             for a better web.
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com" class="nav-link text-muted"
-                                    target="_blank">Creative Tim</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted"
-                                    target="_blank">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/blog" class="nav-link text-muted"
-                                    target="_blank">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted"
-                                    target="_blank">License</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

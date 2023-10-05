@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Counter;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class DashBoradController extends Controller
@@ -10,7 +12,11 @@ class DashBoradController extends Controller
 
 
     function index() {
-
-        return view('backend.pages.dashborad');
+        $counters=Counter::all();
+        $post=Post::orderBy('id','asc')->first();
+        return view('backend.pages.dashborad',[
+            'counters'=>$counters,
+            'post'=>$post
+        ]);
     }
 }

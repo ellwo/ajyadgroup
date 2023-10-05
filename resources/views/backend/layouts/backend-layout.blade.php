@@ -15,14 +15,13 @@
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
-    <link href="{{ asset('assets/css/nucleo-icons.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
 
 
+    @livewireStyles
     <!-- CSS Files -->
-    @vite([ 'resources/js/app.js','resources/scss/argon-dashboard.scss'])
+    @vite([ 'resources/js/app.js','resources/scss/argon-dashboard.scss','resources/js/custom.js'])
 
 
     <link rel="stylesheet" href="{{ asset('assets/css/custom-argon.css') }}">
@@ -31,7 +30,7 @@
 
 
         .h-64{
-            width: 100% !important;
+            width: 80% !important;
         }
         img{
             width: 100%;
@@ -44,7 +43,7 @@
 
 </head>
 
-<body class="{{ $class ?? '' }}">
+<body  class="{{ $class ?? '' }} ">
 
 
 
@@ -199,6 +198,7 @@
     @endauth
 
     <!--   Core JS Files   -->
+
     <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
@@ -217,6 +217,7 @@
 
     {{-- <script src="{{ asset('assets/js/argon-dashboard.js') }}"></script>
      --}}
+     @livewireScripts
     @stack('js');
 </body>
 

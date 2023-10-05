@@ -69,9 +69,8 @@
    @endsection
 
    @push('js')
-   <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
-   <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/translations/ar.js"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.1/ui/trumbowyg.min.css">
+   <script src="{{ asset('assets/js/ar.js') }}"></script>
+   <script src="{{ asset('assets/js/ckeditor.js') }}"></script>
 
 
 <script>

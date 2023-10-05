@@ -57,28 +57,8 @@
             </div><!-- End Google Maps -->
 
             <div class="col-lg-6">
-              <div  class="php-email-form">
-                <div class="row gy-4">
-                  <div class="col-lg-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="اسمك" required>
-                  </div>
-                  <div class="col-lg-6 form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="بريدك الالكتروني" required>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="العنوان" required>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" placeholder="الرسالة" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button onclick="alert('تم ارسال رسالتك بنجاح سيتم التواصل معك قريبا')" type="submit">ارسال</button></div>
-            </div>
+
+            @livewire('contact-us-form',key(time()))
             </div><!-- End Contact Form -->
 
           </div>
@@ -86,5 +66,6 @@
         </div>
       </section><!-- End Contact Section -->
 
+      
       @include('pages.addresses.address-list')
 </x-public-layout>

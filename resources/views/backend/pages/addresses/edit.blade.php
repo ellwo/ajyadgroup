@@ -18,7 +18,7 @@
                         </div>
                         <div class="my-auto col-6 text-start">
 
-<button type="button" class="btn bg-gradient-info btn-sm">عودة الى القائمة <i class="fa fa-arrow-left"></i></button>
+<a href="{{ route('addresses') }}" class="btn bg-gradient-info btn-sm">عودة الى القائمة <i class="fa fa-arrow-left"></i></a>
                         </div>
                     </div>
                 </div>
