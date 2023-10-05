@@ -1,0 +1,22 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-7c221afc.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-149467b0.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/custom.js": {
+    "file": "assets/custom-fa318f03.js",
+    "isEntry": true,
+    "src": "resources/js/custom.js"
+  },
+  "resources/scss/argon-dashboard.scss": {
+    "file": "assets/argon-dashboard-fbaeaeda.css",
+    "isEntry": true,
+    "src": "resources/scss/argon-dashboard.scss"
+  }
+}
