@@ -12,7 +12,7 @@
 
         @foreach ($cities as $c)
             <div class="flex flex-col mt-2 mb-2">
-                <div class="pb-0 mt-2 mb-0 text-right section-header">
+                <div class="pb-4 mt-2 mb-0 text-right section-header">
                     <h3>
                         مكاتب {{ $c->name }}</h3>
                 </div>
@@ -21,7 +21,7 @@
 
 
                     @foreach ($c->ads as $address)
-                    <div class="flex items-center justify-between p-4 border rounded-md ">
+                    <div class="flex items-center shadow-xl hover:border-primary hover:shadow-primary justify-between p-4 border rounded-md ">
                         <div class=" member" data-aos="fade-up" data-aos-delay="100">
 
                             <div class="member-info">

@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ServicePriceController;
 use App\Http\Controllers\Admin\UploadeController;
 use App\Http\Controllers\DashBoradController;
 use App\Http\Controllers\PassportInfoController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\SiteInfoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,7 @@ Route::get('/',[DashBoradController::class,'index'] )->middleware(['auth', 'veri
     Route::resource('/service_prices',ServicePriceController::class)->name('index','service_prices');
     Route::resource('/counters',CounterController::class)->name('index','counters');
 
+    Route::resource('/question',QuestionController::class)->name('index','question');
     Route::resource('/contacts',ContactController::class)->name('index','contacts');
     Route::resource('/service-parts', ServicePartController::class)->name('index','service-parts');
     Route::post('/image-upload',[UploadeController::class,'storeImage'])->name('image.upload');

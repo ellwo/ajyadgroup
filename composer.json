@@ -13,7 +13,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
-        "spatie/laravel-sitemap": "*"
+        "spatie/laravel-sitemap": "^6.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

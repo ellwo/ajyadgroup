@@ -13,6 +13,9 @@ class QuestionController extends Controller
     public function index()
     {
         //
+
+        $posts=Question::all();
+        return view('backend.pages.ques.index',['posts'=>$posts]);
     }
 
     /**
@@ -20,6 +23,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
+        return view('backend.pages.ques.create');
         //
     }
 
@@ -28,7 +32,15 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
+
+        Question::create([
+            'qu'=>$request['qu'],
+            'an'=>$request['an']
+        ]);
+
+        return redirect()->route('question')->with('status','تم الاضافة بنجاح');
         //
+        
     }
 
     /**
@@ -45,6 +57,7 @@ class QuestionController extends Controller
     public function edit(Question $question)
     {
         //
+        return view('backend.pages.ques.edit',['p'=>$question]);
     }
 
     /**
@@ -61,5 +74,8 @@ class QuestionController extends Controller
     public function destroy(Question $question)
     {
         //
+        $question->delete();
+
+        return redirect()->route('question')->with('status','تم الحذف بنجاح');
     }
 }

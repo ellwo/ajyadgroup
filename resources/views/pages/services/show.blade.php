@@ -30,37 +30,62 @@
             </div>
             <div class="row gy-4 relative min-h-screen">
 
-                <div class=" nav nav-tabs col-lg-4 sticky">
+                <div class=" nav nav-tabs col-lg-3 sticky">
                     
                     
-                    <div class="w-full flex services-list">
+                    <div class="w-full  services-list">
 
-                        <div class="w-1/2 navbar ">
+                        {{-- <div class="w-1/2 navbar ">
                             <a href="">
                                 $sdd
                             </a>
-                        </div>
-                        <div style="border:none;" class="w-1/2 services-list border-none">
+                        </div> --}}
+                        <div style="border:none;" class="flex flex-col w-full justify-items-stretch services-list border-none">
 
+
+
+
+
+                             <a style="padding: 16px !important;" class="shadow-xl active p-2">
+                                    {{$service->titel}}
+                                </a>
+                           
                             @php
                                 $it=$service_part;
                             @endphp
-                           @foreach ($service->service_parts as $ser)
+                            <div >
+
+                                @foreach ($service->service_parts as $ser)
     
-                           <a class="cursor-pointer @php
-                               if($service_part==$ser->id)
-                               echo 'active show';
-                            
-                           @endphp" data-bs-toggle="tab" data-aos="fade-up" data-bs-target="#tab-{{ $ser->id }}">
-                            {{ $ser->titel }}</a>
-                           @endforeach
+                                <a class="cursor-pointer mx-4 @php
+                                    if($service_part==$ser->id)
+                                    echo 'active show';
+                                 
+                                @endphp" data-bs-toggle="tab" data-aos="fade-up" data-bs-target="#tab-{{ $ser->id }}">
+                                 {{ $ser->titel }}</a>
+                                @endforeach
+                            </div>
+
+
+                            @foreach ($services as $sero)
+
+
+                                <a style="padding: 16px !important;" class="shadow-xl p-2" href="{{ route('service.show',$sero) }}">
+                                    {{$sero->titel}}
+                                </a>
+                                
+                            @endforeach
+
+
+
+
                         </div>
     
                     </div>
                     
                 </div>
 
-                <div class="col-lg-8">
+                <div class="col-lg-8 ">
 
 
                     @php
@@ -82,7 +107,7 @@
 
                         @foreach ($ser->steps??[] as $s)
                         <div class="pb-0 mt-2 mb-0 text-right section-header">
-                            <h5 class="font-bold">
+                            <h5 class="font-bold shadow-lg">
                             {{ $s['title'] }}</h5>
                         </div>
                         <ul>

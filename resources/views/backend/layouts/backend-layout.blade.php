@@ -77,11 +77,7 @@
                         </nav>
                         <div class="px-0 mt-2 collapse navbar-collapse mt-sm-0" id="navbar">
                             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-                                <div dir="rtl" class="input-group">
-                                    <span class="input-group-text text-body"><i class="fas fa-search"
-                                            aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" placeholder="أكتب هنا...">
-                                </div>
+                                
                             </div>
                             <ul class="navbar-nav me-auto ms-0 justify-content-end">
                                 <li class="nav-item d-flex align-items-center">
@@ -190,6 +186,8 @@
                         </div>
                     </div>
                 </nav>
+
+                
                 @yield('content')
                 </main>
 

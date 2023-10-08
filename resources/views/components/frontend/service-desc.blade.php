@@ -48,8 +48,8 @@
 
 
     <article class="blog-details">
-      <div class="meta-top">
-          <div class="section-header my-0 py-0">
+      <div class="meta-top mt-2">
+          <div class="section-header shadow-lg my-0 py-2">
               <h2>{{ $post->titel }}</h2>
               <p></p>
           </div>

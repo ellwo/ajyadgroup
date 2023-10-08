@@ -38,7 +38,7 @@
                     <div class="p-3 ">
                         <div class="row">
                             <div class="col-12">
-                                <a class="p-2 mt-auto mb-0 bg-white rounded text-info btn font-weight-bold ps-1 icon-move-left"
+                                <a class="p-2 mt-auto mb-0 bg-white rounded  btn font-weight-bold ps-1 icon-move-left"
                                 href="{{ route('counters') }}">ادارة الارقام / العدادات
                                 <i class="text-sm fas fa-arrow-left ms-1" aria-hidden="true"></i>
                             </a>

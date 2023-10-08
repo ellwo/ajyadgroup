@@ -235,6 +235,7 @@
                 }
             });
 
+            var da=Json.string
             await $.ajax({
                 method: 'post',
                 url: "{{ route('pass.createex') }}",

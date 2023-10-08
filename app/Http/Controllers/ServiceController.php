@@ -77,7 +77,7 @@ class ServiceController extends Controller
     //    JsonLd::setDescription(Config::get('sitesetting.about_us'));
     //    JsonLd::setType('Article');
     //    JsonLd::addImage(Config::get('sitesetting.hero_icon'));
-    $service_part=$_GET['service_part']??$service->service_parts[0]?->id;
+    $service_part=$_GET['service_part']??$service->service_parts->first()?->id;
     
 
     $p=ServicePrice::find($service_part);
@@ -85,7 +85,7 @@ class ServiceController extends Controller
        SEOTools::setDescription($service->note);
        
        SEOTools::opengraph()->setUrl(request()->getUri());
-       SEOTools::opengraph()->setDescription($service->note.$p->note);
+       SEOTools::opengraph()->setDescription($service->note.$p?->note);
        SEOTools::setCanonical(request()->getUri());
        SEOTools::opengraph()->addProperty('type', 'articles');
      
@@ -94,11 +94,13 @@ class ServiceController extends Controller
        SEOTools::jsonLd()->setDescription($service->note);
        SEOTools::jsonLd()->setTitle(Config::get('sitesetting.app_name'));
     //   
+
+    $services=Service::where('id','!=',$service->id)->get();
      
         //  return dd($service->service_parts);
-      $service_part=$_GET['service_part']??$service->service_parts[0]?->id;
         return view('pages.services.show',['service'=>$service,
-    'service_part'=>$service_part]);
+    'service_part'=>$service_part,
+'services'=>$services]);
         //
     }
 

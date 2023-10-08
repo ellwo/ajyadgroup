@@ -133,7 +133,7 @@
     </div>
 </aside> --}}
 <aside
-class="my-3  border-0  bg-light sidenav navbar navbar-vertical navbar-expand-xs border-radius-xl fixed-end me-4 rotate-caret"
+class="my-3  border-0  bg-white sidenav navbar navbar-vertical navbar-expand-xs border-radius-xl fixed-end me-4 rotate-caret"
 id="sidenav-main">
 <div class="sidenav-header">
     <i class="top-0 p-3 cursor-pointer fas fa-times text-secondary opacity-5 position-absolute start-0 d-none d-xl-none"
@@ -215,6 +215,21 @@ id="sidenav-main">
                 <span class="nav-link-text me-1">الرسائل /الشكاوى والاستفسارات</span>
             </a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link
+
+            @if (request()->routeIs('question')||request()->routeIs('contacts.*'))
+            active
+            @endif
+            " href="{{ route('question') }}">
+                <div
+                    class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
+                    <i class="text-lg  text-info opacity-10 font-bold">؟</i>
+                </div>
+                <span class="nav-link-text me-1">ادارة الاسئلة الشائعة</span>
+            </a>
+        </li>
         <li class="nav-item">
             <a class="nav-link
             @if(request()->routeIs('companies'))
@@ -258,15 +273,15 @@ id="sidenav-main">
             </a>
         </li>
         <li class="mt-3 nav-item">
-            <h6 class="text-xs ps-4 me-4 pe-2 text-uppercase font-weight-bolder opacity-6">صفحات المرافق</h6>
+     <hr>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="#">
+            <a class="nav-link " href="{{ route('setting') }}">
                 <div
                     class="text-center icon icon-shape icon-sm border-radius-md ms-2 d-flex align-items-center justify-content-center">
-                    <i class="text-sm ni ni-single-02 text-dark opacity-10"></i>
+                    <i class="text-sm fa  fa-cog  text-dark opacity-10"></i>
                 </div>
-                <span class="nav-link-text me-1">حساب تعريفي</span>
+                <span class="nav-link-text me-1">الاعدادات</span>
             </a>
         </li>
         <li class="nav-item">

@@ -40,11 +40,13 @@ class ServicePriceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ServicePart $servicePrice)
+    public function show(ServicePrice $servicePrice)
     {
+        
         //
-        return redirect()->route('service.show',['service'=>$servicePrice]);
-        return view('pages.service-prices.show',['post'=>$servicePrice]);
+       // return redirect()->route('service.show',['service'=>$servicePrice]);
+        return view('pages.services.show',['service'=>$servicePrice->service,
+        'service_part'=>$servicePrice->id]);
     }
 
     /**

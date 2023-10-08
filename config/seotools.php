@@ -3,17 +3,18 @@
  * @see https://github.com/artesaos/seotools
  */
 
+
 return [
     'meta' => [
         /*
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => Config::get('sitesetting.app_name'), // set false to total remove
-            'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => Config::get('sitesetting.about_us'), // set false to total remove
+            'title'        => config('sitesetting.app_name'), // set false to total remove
+            'titleBefore'  => config('sitesetting.app_name','مجموعة اجياد'), // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
+            'description'  => config('sitesetting.about_us'), // set false to total remove
             'separator'    => ' - ',
-            'keywords'     => explode(',',Config::get('sitesetting.keywords'))??[],
+            'keywords'     => explode(',',config('sitesetting.keywords'))??[],
             'canonical'    => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
         ],
@@ -36,12 +37,12 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => Config::get('sitesetting.app_name'), // set false to total remove
-            'description' => Config::get('sitesetting.about_us'), // set false to total remove
+            'title'       => config('sitesetting.app_name'), // set false to total remove
+            'description' => config('sitesetting.about_us'), // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => false,
-            'site_name'   => Config::get('sitesetting.app_name'),
-            'images'      => [Config::get('sitesetting.hero_icon'),Config::get('sitesetting.app_logo')],
+            'site_name'   => config('sitesetting.app_name'),
+            'images'      => [config('sitesetting.hero_icon'),config('sitesetting.app_logo')],
         ],
     ],
     'twitter' => [
@@ -49,7 +50,7 @@ return [
          * The default values to be used by the twitter cards generator.
          */
         'defaults' => [
-            'card'        => Config::get('sitesetting.about_us'),
+            'card'        => config('sitesetting.about_us'),
             //'site'        => '@LuizVinicius73',
         ],
     ],
@@ -58,11 +59,11 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => Config::get('sitesetting.app_name'), // set false to total remove
-            'description' => Config::get('sitesetting.about_us'), // set false to total remove
+            'title'       => config('sitesetting.app_name'), // set false to total remove
+            'description' => config('sitesetting.about_us'), // set false to total remove
             'url'         => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'type'        => 'WebPage',
-            'images'      => [Config::get('sitesetting.app_icon')],
+            'images'      => [config('sitesetting.app_icon')],
         ],
     ],
 ];

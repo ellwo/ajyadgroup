@@ -50,16 +50,20 @@ Route::resource('/service_price',ServicePriceController::class)->name('index','s
 Route::get('/site-map',function ()
 {
 $sitemap= Sitemap::create()
-->add(Url::create('/home') )
-->add(Url::create('/about-us') )
-->add(Url::create('/address') );
+->add(Url::create('/home?key=مجموعة-اجياد') )
+->add(Url::create('/about-us?key=من-نحن') )
+->add(Url::create('/address?key=عنوانينا') )
+->add(Url::create('/pass.search.get?key=الاستعلام-عن-حالة-جواز') )
+->add(Url::create('/contact?key=تواصل-معنا') );
 
 $services=Service::all()->each(function($ser)use($sitemap){
     $sitemap->add(Url::create("/service/{$ser->id}"));
   });
   $services=ServicePrice::all()->each(function($ser)use($sitemap){
-    $sitemap->add(Url::create("/service/{$ser->service->id}?service_part={$ser->id}"));
+    $sitemap->add(Url::create("/service_price/$ser->id"));
   });
+
+
     $sitemap->writeToFile(public_path('sitemap.xml'));
     # code...
 });

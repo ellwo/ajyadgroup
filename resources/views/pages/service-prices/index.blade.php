@@ -56,7 +56,7 @@
 
                               </div>
 
-                        <a href="{{ route('service_price.show', $service_price) }}" class="readmore stretched-link">التفاصيل <i
+                        <a href="{{ route('service_price.show', $service_price->id) }}" class="readmore stretched-link">التفاصيل <i
                             class="bi bi-arrow-left"></i></a>
                             </div>
 
