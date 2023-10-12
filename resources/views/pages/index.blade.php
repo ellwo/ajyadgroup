@@ -67,7 +67,7 @@
 
             <div class="row justify-content-between gy-4">
 
-                <div class="flex flex-col d-flex align-items-center" data-aos="fade-up">
+                <div class="flex shadow-xl bg-white md:col-10 mx-auto flex-col d-flex align-items-center" data-aos="fade-up">
 
 
                     <div class="py-0 m-0 mb-0 section-header">
@@ -92,7 +92,7 @@
 
                             <div class="w-full">
                                 <input type="text" name="pass_num"
-                                    class="w-full p-2 font-bold border rounded-md md:w-2/3 md:text-2xl focus:border-blue-600"
+                                    class="w-full p-2 font-bold border shadow-md rounded-md md:w-2/3 md:text-2xl focus:border-blue-600"
                                     placeholder="رقم الجواز" required>
                             </div>
 
@@ -208,18 +208,22 @@
             </div>
           <div class="flex justify-center text-center row gy-4">
 
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i class="flex-shrink-0 bi bi-emoji-smile color-blue"></i>
-                <div>
-                  <span data-purecounter-start="0" data-purecounter-end="23200" data-purecounter-duration="1"
-                    class="purecounter"></span>
-                  <p>عميل سعيد</p>
-                </div>
-              </div>
-            </div><!-- End Stats Item -->
 
-            <div class="col-lg-3 col-md-6">
+            @foreach ($counters??[] as $c)
+                
+            <div class="col-lg-3 col-md-6 shadow-md">
+                <div class="stats-item d-flex align-items-center w-100 h-100">
+                  <i class="flex-shrink-0 {{$c->img}} color-blue"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="{{$c->value}}" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                    <p>{{$c->titel}}</p>
+                  </div>
+                </div>
+              </div><!-- End Stats Item -->
+  
+            @endforeach
+            {{-- <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
                 <i class="flex-shrink-0 bi bi-journal-richtext color-orange"></i>
                 <div>
@@ -239,7 +243,7 @@
                   <p>عام من الخبرة</p>
                 </div>
               </div>
-            </div><!-- End Stats Item -->
+            </div><!-- End Stats Item --> --}}
 
             <!-- End Stats Item -->
 
@@ -272,7 +276,7 @@
 
                 @foreach ($services as $service)
 
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 shadow-xl" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
                         <div class="icon">
                             <i class="{{ $service->img }}"></i>
@@ -309,7 +313,7 @@
                 <h2>شركاؤنا</h2>
             </header>
 
-            <div  class="clients-slider swiper">
+            <div dir="ltr"  class="clients-slider pb-4 swiper">
                 <div class="swiper-wrapper align-items-center">
 
                     @foreach ($companies as $co)
@@ -398,7 +402,7 @@
 
 
         @foreach ($posts as $p)
-        <div class=" col-xl-3 col-md-6" data-aos="fade-up " data-aos-delay="100 ">
+        <div class=" col-xl-3 col-md-6 shadow-md" data-aos="fade-up " data-aos-delay="100 ">
             <div class="post-item position-relative h-100 ">
 
               <div class="overflow-hidden post-img position-relative ">

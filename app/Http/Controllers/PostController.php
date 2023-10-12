@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Config;
 
 use Artesaos\SEOTools\Facades\SEOTools;
 use Artesaos\SEOTools\Facades\JsonLd;
+use Artesaos\SEOTools\Facades\SEOMeta;
 
 class PostController extends Controller
 {
@@ -48,7 +49,7 @@ class PostController extends Controller
         $r_posts=Post::where('id','!=',$post->id)->orderBy('id','desc')->take(3)->get();
         //
      
-        SEOTools::setTitle($post->titel);
+        SEOTools::setTitle(SEOTools::getTitle()."-".$post->titel);
         SEOTools::setDescription($post->content);
         
         SEOTools::opengraph()->setUrl(request()->getUri());
@@ -59,7 +60,11 @@ class PostController extends Controller
         SEOTools::twitter()->setSite(request()->getUri());
         SEOTools::twitter()->addImage(Config::get('sitesetting.app_logo'), ['height' => 300, 'width' => 300]);
         SEOTools::twitter()->addImage($post->img, ['height' => 600, 'width' => 600]);
-       
+        $post->content=str_replace('&nbsp;','',$post->content);
+        $p=explode(' ',$post->content);
+
+        SEOMeta::addKeyword(implode(',',$p));
+ 
         SEOTools::jsonLd()->setDescription($post->content);
         SEOTools::jsonLd()->setTitle(Config::get('sitesetting.app_name'));
         SEOTools::jsonLd()->addImage($post->img);

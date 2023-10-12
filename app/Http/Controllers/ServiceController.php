@@ -81,17 +81,20 @@ class ServiceController extends Controller
     
 
     $p=ServicePrice::find($service_part);
-       SEOTools::setTitle($service->titel);
-       SEOTools::setDescription($service->note);
+       //SEOTools::setTitle($service->titel);
+       SEOTools::setTitle(SEOTools::getTitle()."-".$service->titel);
+       
+       SEOTools::setDescription(strip_tags($service->note));
        
        SEOTools::opengraph()->setUrl(request()->getUri());
-       SEOTools::opengraph()->setDescription($service->note.$p?->note);
+       SEOTools::opengraph()->setDescription(strip_tags($service->note).strip_tags($p?->note));
        SEOTools::setCanonical(request()->getUri());
        SEOTools::opengraph()->addProperty('type', 'articles');
      
        SEOTools::twitter()->setSite($service->titel);
+      // SEOTools::twitter()->setcard($service->titel);
 
-       SEOTools::jsonLd()->setDescription($service->note);
+       SEOTools::jsonLd()->setDescription(strip_tags($service->note));
        SEOTools::jsonLd()->setTitle(Config::get('sitesetting.app_name'));
     //   
 

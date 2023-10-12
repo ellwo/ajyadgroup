@@ -26,14 +26,14 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                      <label for="exampleFormControlInput1">اسم الخدمة</label>
+                      <label for="exampleFormControlInput1">اسم العداد</label>
                       <input type="text" required name="titel" class="form-control" id="exampleFormControlInput1" value="{{ $counter->titel }}" placeholder="ادخل اسم الخدمة">
                       <x-input-error :messages="$errors->get('titel')" class="mt-2" />
 
                     </div>
                     <div class="form-group">
 
-                      <label for="exampleFormControlSelect1">ايقونة الخدمة</label>
+                      <label for="exampleFormControlSelect1">ايقونة العداد</label>
 
                       <input type="hidden" name="img" id="img" value="{{ $counter->img }}">
 
@@ -42,7 +42,7 @@
                     <a href="#" class="btn dropdown-toggle " data-bs-toggle="dropdown" id="navbarDropdownMenuLink2">
                         <i id="theicon" class="{{ old('img',$counter->img) }} "></i> ايقونة الخدمة
                     </a>
-                    <ul id="selectison" style="height: 30vh !important; overflow-y: auto !important;" class="dropdown-menu h-24" aria-labelledby="navbarDropdownMenuLink2">
+                    <ul id="selectison" style="height: 30vh !important; width: 30vh !important; overflow-y: auto !important; display: flex; flex-wrap: wrap;" class="dropdown-menu h-24" aria-labelledby="navbarDropdownMenuLink2">
                         <li>
                             <div class="dropdown-item" >
                                 <i class=""></i>

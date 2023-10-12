@@ -73,7 +73,6 @@
                                         <button type="button" class="btn bg-gradient-danger btn-sm">حذف <i class="fa fa-delete"></i></button>
 <a href="{{ route('counters.edit',$counter->id) }}" class="btn btn-outline-warning btn-sm">تعديل <i class="fa fa-edit"></i></a>
 
-<a href="{{ route('counters.show',$counter->id) }}" class="btn btn-outline-success btn-sm">عرض <i class="fa fa-eye"></i></a>
 
 </td>
                                 </tr>

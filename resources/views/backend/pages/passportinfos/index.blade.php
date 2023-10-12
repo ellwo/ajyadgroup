@@ -148,8 +148,11 @@
                                 dataCell.innerHTML = data[i][key];
                                 //     var ob={key:key,};
                                 if (key == 3 || key == 4 || key == 5 || key == 6) {
-                                    if (data[i][key] != null) {
-                                        data[i][key] = ExcelDateToJSDate(data[i][key]);
+                                    if (data[i][key] != null && data[i][key]!="" ) {
+                                      console.log(data[i][key]);
+                                          
+                                      data[i][key] = ExcelDateToJSDate(data[i][key]);
+                                        console.log(data[i][key]);
                                     }
                                 }
                             }
@@ -235,7 +238,7 @@
                 }
             });
 
-            var da=Json.string
+            //var da=Json.string
             await $.ajax({
                 method: 'post',
                 url: "{{ route('pass.createex') }}",

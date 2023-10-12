@@ -156,15 +156,19 @@
     </div>
   </section>
 
-  <section>
-    @include('pages.quns')
-  
-  </section>
+  @if (count($quns??[])>0)
+
+  @include('pages.quns')    
+  @endif
   <!-- End About Section -->
 
   <!-- ======= Stats Counter Section ======= -->
 
   <x-slot name="script">
+
+  <script src="{{ asset('assets/js/ckeditor.js') }}"></script>
+  <script src="{{ asset('assets/js/ar.js') }}"></script>
+
     <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }} "></script>
     <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }} "></script>
     <script src="{{ asset('assets/vendor/owl/js/jquery.min.js') }} "></script>

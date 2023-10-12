@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Models\City;
+use App\Models\Counter;
+use App\Models\Question;
 use App\Models\SiteInfo;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\ServiceProvider;
@@ -34,7 +36,15 @@ class AppServiceProvider extends ServiceProvider
             return City::all();
         });
 
+        $counters=Cache::remember('counters',3600*60*60,function(){
+            return Counter::all();
+        });
+        $quns=Cache::remember('quns',3600*60*60,function(){
+            return Question::all();
+        });
         view()->share('cities',$cities);
+        view()->share('counters',$counters);
+        view()->share('quns',$quns);
         $settings=SiteInfo::all();
         foreach($settings as $setting){
 
@@ -54,8 +64,9 @@ class AppServiceProvider extends ServiceProvider
 
 
     SEOMeta::setTitle(Config::get('sitesetting.app_name'));
-    SEOMeta::setDescription(Config::get('sitesetting.about_us'));
-   // SEOMeta::addMeta('article:published_time', $post->published_date->toW3CString(), 'property');
+    SEOMeta::setDescription( strip_tags(Config::get('sitesetting.about_us')));
+    SEOMeta::addKeyword(explode(',',Config::get('sitesetting.keywords'))??[]);
+    // SEOMeta::addMeta('article:published_time', $post->published_date->toW3CString(), 'property');
  //   SEOMeta::addMeta('article:section', $post->category, 'property');
   //  SEOMeta::addKeyword(['key1', 'key2', 'key3']);
   SEOMeta::setCanonical(request()->getUri());
@@ -78,7 +89,7 @@ class AppServiceProvider extends ServiceProvider
 
 
    JsonLd::setTitle(Config::get('sitesetting.app_name'));
-   JsonLd::setDescription(Config::get('sitesetting.about_us'));
+   JsonLd::setDescription( strip_tags(Config::get('sitesetting.about_us')));
    JsonLd::addImage(Config::get('sitesetting.hero_icon'));
 
     }

@@ -1,78 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
-        <loc>http://127.0.0.1:8000/home?key=مجموعة-اجياد</loc>
-            <changefreq>daily</changefreq>
+        <loc>http://127.0.0.1:8000/home</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/about-us</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/about-us?key=من-نحن</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <loc>http://127.0.0.1:8000/address</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/address?key=عنوانينا</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <loc>http://127.0.0.1:8000/pass.search.get</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/pass.search.get?key=الاستعلام-عن-حالة-جواز</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
-        <loc>http://127.0.0.1:8000/contact?key=تواصل-معنا</loc>
-            <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <loc>http://127.0.0.1:8000/contact</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service/1</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service/2</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service/3</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service/4</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service/5</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service/6</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service_price/1</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service_price/2</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service_price/3</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
         <loc>http://127.0.0.1:8000/service_price/4</loc>
-            <changefreq>daily</changefreq>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/post/1</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/post/2</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/about-us#quns2</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/about-us#quns3</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/address/قطاع الحج والعمرة</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/address/قطاع تخليص التأشيرات</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/address/فرع عدن</loc>
+        <lastmod>2023-10-13T00:00:00+03:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
 </urlset>

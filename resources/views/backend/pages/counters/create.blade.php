@@ -18,7 +18,7 @@
                         </div>
                         <div class="my-auto col-6 text-start">
 
-<button type="button" class="btn bg-gradient-info btn-sm">عودة الى القائمة <i class="fa fa-arrow-left"></i></button>
+<a href="{{ route('counters') }}" class="btn bg-gradient-info btn-sm">عودة الى القائمة <i class="fa fa-arrow-left"></i></a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                                 <a href="#" class="btn dropdown-toggle " data-bs-toggle="dropdown" id="navbarDropdownMenuLink2">
                                     <i id="theicon" class="{{ old('img') }} "></i> ايقونة العداد
                                 </a>
-                                <ul id="selectison" style="height: 30vh !important; overflow-y: auto !important;" class="dropdown-menu h-24" aria-labelledby="navbarDropdownMenuLink2">
+                                <ul id="selectison" style="height: 30vh !important; width: 30vh !important; overflow-y: auto !important; display: flex; flex-wrap: wrap;" class="dropdown-menu h-24" aria-labelledby="navbarDropdownMenuLink2">
                                     <li>
                                         <div class="dropdown-item" >
                                             <i class=""></i>

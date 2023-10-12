@@ -5,8 +5,13 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Config;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
+
 
 class Post extends Model
+// implements Feedable
 {
     use HasFactory;
     protected $fillable=[
@@ -126,6 +131,25 @@ class Post extends Model
         return $day;
 
 
+   }
+
+
+   
+
+
+   public function toFeedItem(): FeedItem
+   {
+       return FeedItem::create()
+           ->id($this->id)
+           ->title($this->titel)
+           ->image($this->img)
+           ->summary($this->content)
+           ->updated(Carbon::today())
+           ->link(route('post.show',$this->id))
+           ->authorName(Config::get('sitesetting.app_name'))
+           ->authorEmail(Config::get('sitesetting.email'))
+           ->category($this->titel)
+           ->image($this->img);
    }
 
 }

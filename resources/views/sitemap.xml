@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+        <loc>http://127.0.0.1:8000/home?key=مجموعة-اجياد</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/about-us?key=من-نحن</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/address?key=عنوانينا</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/pass.search.get?key=الاستعلام-عن-حالة-جواز</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/contact?key=تواصل-معنا</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service/1</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service/2</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service/3</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service/4</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service/5</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service/6</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service_price/1?title=حجز مقاعد في القطارات&amp;content=</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service_price/2?title=تأشيرة عمرة&amp;content=&lt;h3&gt;&lt;strong&gt;&amp;nbsp;برامج العمرة المقدمة من مجموعة أجياد&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1-نظام الافواج&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;table&quot;&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;عدد الايام&lt;/th&gt;&lt;th&gt;السعر&lt;/th&gt;&lt;th&gt;التفاصيل&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;2350&lt;/td&gt;&lt;td&gt;8 ايام في مكة ويومان في المدينة&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;2750&lt;/td&gt;&lt;td&gt;13 ايام في مكة ويومان في المدينة&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;3150&lt;/td&gt;&lt;td&gt;18 ايام في مكة ويومان في المدينة&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;2- نظام الثنائي&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;table&quot;&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;عدد الايام&lt;/th&gt;&lt;th&gt;السعر&lt;/th&gt;&lt;th&gt;التفاصيل&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;3000&lt;/td&gt;&lt;td&gt;8 ايام في مكة ويومان في المدينة-سكن ثنائي&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;3400&lt;/td&gt;&lt;td&gt;13 ايام في مكة ويومان في المدينة&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;3800&lt;/td&gt;&lt;td&gt;18 ايام في مكة ويومان في المدينة&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&amp;nbsp; &amp;nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;بيانات السكن : -&lt;/strong&gt;&lt;/p&gt;&lt;figure class=&quot;table&quot;&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;المدينة&lt;/th&gt;&lt;th&gt;عنوان السكن&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;مكة المكرمة&lt;/td&gt;&lt;td&gt;ابراج الكسوة&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;المدينة المنورة&lt;/td&gt;&lt;td&gt;نزل رويال&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;الخدمات المقدمة في البرنامج:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;إصدار التأشيرة&lt;/li&gt;&lt;li&gt;خدمات السكن في مكة المكرمة والمدينة المنورة&lt;/li&gt;&lt;li&gt;المواصلات بين مكة والمدينة&lt;/li&gt;&lt;li&gt;خدمات الإعاشة – ثلاث وجبات خلال مدة العزل الصحي – ثلاثة أيام بحد أدنى&lt;/li&gt;&lt;li&gt;النقل الداخلي دورة كاملة (جده – مكة – المدينة – جدة)&lt;/li&gt;&lt;li&gt;حجوزات طيران مؤكدة للذهاب والعودة وفق البرنامج المعتمد لكل فوج&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;ملاحظات هامة:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;الفئة العمرية المسموح بها بين 18 – 50.&lt;/li&gt;&lt;li&gt;تقديم شهادة فحص PCR بنتيجة سلبية تثبت خلو المعتمر من فايروس كورونا بتأريخ لا يتجاوز 72 ساعة.&lt;/li&gt;&lt;li&gt;التفويج يكون جماعي بحسب الموعد المحدد من وكالة العمرة.&lt;/li&gt;&lt;li&gt;يحب على كل معتمر توفير الضمانات المطلوبة لتأكيد عدم التأخير عن موعد العودة.&lt;/li&gt;&lt;li&gt;البرنامج لا يشمل سعر ذاكر الطيران.&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;الوثائق المطلوبة&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;اصل جواز السفر&lt;/li&gt;&lt;li&gt;صورتين شخصية خلفية بيضاء&lt;/li&gt;&lt;li&gt;إثبات صلة القرابة للمحارم&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service_price/3?title=اقامة&amp;content=&lt;p&gt;&lt;strong&gt;نستطيع تقديم خدمة الحصول على اقامة &amp;nbsp;في المملكة العربية السعودية&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;وفي ما يلي الخطوات والمتطلبات والتعليمات للحصول على تأشيرة العمل:-&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;متطلبات الحصول على اقامة :-&lt;/strong&gt;&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&amp;nbsp;جواز السفر ساري المفعول .&lt;/li&gt;&lt;li&gt;صورتين خلفية بيضاء 4×6.&lt;/li&gt;&lt;li&gt;الفحص الطبي من احدى المستشفيات المعتمدة.&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/li&gt;&lt;li&gt;صورة التأشيرة.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/li&gt;&lt;li&gt;صورة هوية الكفيل للأفراد أو السجل التجاري للشركات.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;عمل تفويض إلكتروني بإسم أجياد ترخيص رقم 17.&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;&amp;nbsp;&lt;/h4&gt;&lt;h4&gt;&lt;strong&gt;تعليمات اضافية :-&lt;/strong&gt;&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt; يجب الا تقل صلاحية الجواز عن ستة أشهر. &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;li&gt;مطابقة المهنة في الجواز للمهنه في فيزة العمل.&lt;/li&gt;&lt;li&gt;إرفاق اصل شهادة المؤهل العلمي معمدة من الجهات الحكومية لفيز العمل المتخصصة.&lt;/li&gt;&lt;li&gt;لا يقل عمر المتقدم لنيل فيزة العمل عن 21 سنة ولا يزيد عن 40 سنة.. &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;strong&gt; &amp;nbsp; &amp;nbsp;&lt;/strong&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;المستشفيات المعتمدة لعمل الفحص الطبي هي&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;مستشفى آزال صنعاء &amp;nbsp;عدن&amp;nbsp;&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;مستشفى صابر عدن.&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/service_price/4?title=فيزة عمل&amp;content=&lt;p&gt;&lt;strong&gt;نستطيع تقديم خدمة الحصول على فيزة عمل في المملكة العربية السعودية&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;وفي ما يلي الخطوات والمتطلبات والتعليمات للحصول على تأشيرة العمل:-&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;متطلبات الحصول على تأشيرة عمل:-&lt;/strong&gt;&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&amp;nbsp;جواز السفر ساري المفعول .&lt;/li&gt;&lt;li&gt;صورتين خلفية بيضاء 4×6.&lt;/li&gt;&lt;li&gt;الفحص الطبي من احدى المستشفيات المعتمدة.&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/li&gt;&lt;li&gt;صورة التأشيرة.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/li&gt;&lt;li&gt;صورة هوية الكفيل للأفراد أو السجل التجاري للشركات.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;عمل تفويض إلكتروني بإسم أجياد ترخيص رقم 17.&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;&amp;nbsp;&lt;/h4&gt;&lt;h4&gt;&lt;strong&gt;تعليمات اضافية :-&lt;/strong&gt;&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt; يجب الا تقل صلاحية الجواز عن ستة أشهر. &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;li&gt;مطابقة المهنة في الجواز للمهنه في فيزة العمل.&lt;/li&gt;&lt;li&gt;إرفاق اصل شهادة المؤهل العلمي معمدة من الجهات الحكومية لفيز العمل المتخصصة.&lt;/li&gt;&lt;li&gt;لا يقل عمر المتقدم لنيل فيزة العمل عن 21 سنة ولا يزيد عن 40 سنة.. &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;strong&gt; &amp;nbsp; &amp;nbsp;&lt;/strong&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;المستشفيات المعتمدة لعمل الفحص الطبي هي&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;مستشفى آزال صنعاء &amp;nbsp;عدن&amp;nbsp;&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;مستشفى صابر عدن.&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/post/1?title=حملة مجموعة أجياد التوعوية لمواجهة وباء جائحة كورونا – نشر الوعي مسئولية الجميع</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/post/2?title=السفير السعودي لدى اليمن محمد ال جابر يقول انه سيتم اعادة افتتاح السفارة السعودية في عدن</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/2?title=ماهيا المستشفيات المعتمدة لعمل الفحص الطبي ؟</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/3?title=ماهيا متطلبات التقديم على تأشيرة عمل ؟</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+</urlset>

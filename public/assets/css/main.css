@@ -1988,6 +1988,24 @@ section {
     .hero .info {
         padding: 0 50px;
     }
+    .services .service-item h3 {
+        color: var(--color-default);
+        font-weight: 700;
+        margin: 0 0 10px 0;
+        padding-bottom: 4px;
+        font-size: 16px;
+        position: relative;
+        display: inline-block;
+        border-bottom: 4px solid #ebebed;
+        transition: 0.3s;
+    }
+    .services .service-item .icon {
+        width: 48px;
+        height: 48px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    
     .service-details h3 {
         font-size: 19px;
         font-weight: 700;

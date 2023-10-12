@@ -15,7 +15,12 @@ import PerfectScrollbar from 'perfect-scrollbar';
             var pstable = new PerfectScrollbar(restable);
         };
 
-        if (document.getElementsByClassName('sidenav')[0]) {
+        // if (document.getElementById('selectison')) {
+        //     var sele = document.getElementById('selectison');
+        //     var sepstable = new PerfectScrollbar(sele);
+        // };
+
+                if (document.getElementsByClassName('sidenav')[0]) {
             var sidebar = document.querySelector('.sidenav');
             var ps1 = new PerfectScrollbar(sidebar);
         };

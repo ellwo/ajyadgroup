@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Question;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class QuestionController extends Controller
 {
@@ -38,6 +39,7 @@ class QuestionController extends Controller
             'an'=>$request['an']
         ]);
 
+    Cache::forget('quns');
         return redirect()->route('question')->with('status','تم الاضافة بنجاح');
         //
         
@@ -57,6 +59,7 @@ class QuestionController extends Controller
     public function edit(Question $question)
     {
         //
+
         return view('backend.pages.ques.edit',['p'=>$question]);
     }
 
@@ -65,6 +68,15 @@ class QuestionController extends Controller
      */
     public function update(Request $request, Question $question)
     {
+        //
+
+         $question->update([
+            'qu'=>$request['qu'],
+            'an'=>$request['an']
+        ]);
+
+    Cache::forget('quns');
+        return redirect()->route('question')->with('status','تم التعديل بنجاح');
         //
     }
 
