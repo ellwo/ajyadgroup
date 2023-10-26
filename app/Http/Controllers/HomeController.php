@@ -194,9 +194,9 @@ class HomeController extends Controller
         $items,
         env('APP_URL',config('app.url')),
         'feed::rss',
-        'hi hi',
+        Config::get('sitesetting.about_us'),
         'ar',
-        '',
+        Config::get('sitesetting.app_logo'),
         'atom'
          // Base URL of your website
     )  ;

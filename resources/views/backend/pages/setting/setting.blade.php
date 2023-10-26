@@ -9,14 +9,14 @@
                     <div dir="rtl" class="pb-0 card-header">
                         <div class="mb-3 row">
                             <div class="col-6">
-                                <h6>اضافة سعر خدمة جديدة :- </h6>
+                                <h6>الاعدادات </h6>
                                 <p class="text-sm">
 
                                 </p>
                             </div>
                             <div class="my-auto col-6 text-start">
 
-                                <a href="{{ route('service_prices') }}" class="btn bg-gradient-info btn-sm">عودة الى القائمة
+                                <a href="{{ route('dashboard') }}" class="btn bg-gradient-info btn-sm">عودة الى لوحة التحكم 
                                     <i class="fa fa-arrow-left"></i></a>
                             </div>
                         </div>

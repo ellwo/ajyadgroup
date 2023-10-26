@@ -109,8 +109,10 @@ file_put_contents(public_path().'/'.$path,base64_decode($img));
 
 
                 // $pathh= Storage::disk('public')->put($path,base64_decode($img));
+               if(env('APP_ENV','local')=="local")
+                $urllll="http://".request()->getHttpHost().'/'.$path;
+                else
                 $urllll="https://".request()->getHttpHost().'/'.$path;
-
 
                 // $urllll =Storage::disk('public')->url($path);
 
