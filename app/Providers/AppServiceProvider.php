@@ -14,6 +14,8 @@ use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\JsonLd;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Exception;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -31,21 +33,26 @@ class AppServiceProvider extends ServiceProvider
     {
         //
 
+try{
 
-        $cities=Cache::remember('cities',3600*60*60,function(){
-            return City::all();
-        });
+    $cities=Cache::remember('cities',3600*60*60,function(){
+        return City::all();
+    });
 
-        $counters=Cache::remember('counters',3600*60*60,function(){
-            return Counter::all();
-        });
-        $quns=Cache::remember('quns',3600*60*60,function(){
-            return Question::all();
-        });
+    $counters=Cache::remember('counters',3600*60*60,function(){
+        return Counter::all();
+    });
+    $quns=Cache::remember('quns',3600*60*60,function(){
+        return Question::all();
+    });
+       $settings=SiteInfo::all();
+
+}catch(Exception $e){
+
+}
         view()->share('cities',$cities);
         view()->share('counters',$counters);
         view()->share('quns',$quns);
-        $settings=SiteInfo::all();
         foreach($settings as $setting){
 
             if( Config::has('sitesetting.'.$setting['key']))
@@ -54,7 +61,7 @@ class AppServiceProvider extends ServiceProvider
                Config::set("sitesetting.".$setting["key"],$setting["value"]);
             }
     //    config("mysetting.".$setting['key'])->set($setting["value"]);
-    }            
+    }
 
 
 
